@@ -51,7 +51,12 @@ a.breadcrumb-link:hover {
 }
 
 ol.bfont {
-	font-size:16px;
+	font-size:22px;
 	font-family:Verdana;
-	font-variant:oblique;
+	font-style:oblique;
+}
+
+ul.nav-ul a{
+	font-family:Verdana;
+	font-size:22px;
 }

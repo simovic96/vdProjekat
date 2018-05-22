@@ -3,21 +3,25 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/kontakt.css">
 		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script language="javascript">
 		function pritisnuoPosalji(){
-			document.getElementById('rezultat').innerHTML='<div class="alert">OK</div>');
+			document.getElementById('rezultat').innerHTML='<div class="alert alert-success"><b>Hvala na komentaru!</b></div>';
 		}
+		
+		
 		</script>
+		<title>Festival - Kontakt</title>
 	</head>
 	<body style="background-color:#F2F2F2;">
 	
 	
 		<nav class="navbar navbar-default navbar-fixed-top navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 5px solid black;border-bottom: 5px solid black;">
 			<div class="container">
-			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
 			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
 			<span class="navbar-toggler-icon"></span>
 			</button>
@@ -27,19 +31,19 @@
 					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item dropdown activeLink active">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Festival
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
 					  <a class="dropdown-item" href="#">O Festivalu</a>
-					  <a class="dropdown-item" href="#">Žiri</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
 					  <a class="dropdown-item" href="#">Nagrade</a>
 					  <a class="dropdown-item" href="#">Sponzori</a>
 					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
 					</div>
 				  </li>
 				  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Program
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
@@ -68,11 +72,13 @@
 		
 		
 		<div class="container-fluid">
+		<div class="row">
+		<div class="offset-sm-1 col-sm-9">
 			<div class="row">
 				<div class="offset-sm-5 col-sm-4" style="background-color:#f2f2f2!important">
 					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
-					  <ol class="breadcrumb" style="background-color:#f2f2f2!important">
-						<li class="breadcrumb-item"><a href="index.html">Početna</a></li>
+					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
+						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Početna</a></li>
 						<li class="breadcrumb-item">Festival</li>
 						<li class="breadcrumb-item active" aria-current="page">Kontakt</li>
 					  </ol>
@@ -80,7 +86,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class=" offset-sm-2 col-sm-8">
+				<div class="col-sm-10">
 					<h2>Kontakt</h2>
 					<p>Ukoliko imate neka pitanja, sugestije ili komentare, budite slobodni da nam posaljete.</p>
 					<form method="post" action="" id="contactfrm" role="form">
@@ -99,9 +105,14 @@
 						<button name="dugme" type="button" class="btn btn-lg btn-read-more" id="posalji" onclick="pritisnuoPosalji()">Pošalji</button>
 						
 					</form>
-					<div id="rezultat"></div>
+					<div id="rezultat" ></div>
 				</div>
 			</div>
+		</div>
+		<div class="col-sm-2">
+			Prostor za banere
+		</div>
+		</div>
 		</div>
 		
 		<footer class="fixedFooter page-footer font-small white pt-0" style="border-top:5px solid black;border-bottom:5px solid black; background-color:white;">

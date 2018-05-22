@@ -41,3 +41,17 @@ nav.fixednav {
 li.activeLink{
 	border:2px solid black;
 }
+
+a.breadcrumb-link{
+	color:black;
+}
+
+a.breadcrumb-link:hover {
+	font-weight:bold;
+}
+
+ol.bfont {
+	font-size:16px;
+	font-family:Verdana;
+	font-variant:oblique;
+}

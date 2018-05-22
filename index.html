@@ -1,14 +1,69 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body style="background-color:#F2F2F2;">
-	
-		<nav class="navbar navbar-default navbar-fixed-top navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 5px solid black;border-bottom: 5px solid black;">
-			<div class="container">
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active activeLink">
+					<a class="nav-link" href="#">Početna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="#">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
 			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
 			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
 			<span class="navbar-toggler-icon"></span>
@@ -19,7 +74,7 @@
 					<a class="nav-link" href="#">Početna <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Festival
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
@@ -27,11 +82,11 @@
 					  <a class="dropdown-item" href="#">Žiri</a>
 					  <a class="dropdown-item" href="#">Nagrade</a>
 					  <a class="dropdown-item" href="#">Sponzori</a>
-					  <a class="dropdown-item" href="#">Kontakt</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
 					</div>
 				  </li>
 				  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Program
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
@@ -69,13 +124,13 @@
 				  </ol>
 				  <div class="carousel-inner" role="listbox" style="max-width:100%; max-height:60% !important;">
 					<div class="carousel-item active">
-					  <img class="d-block img-fluid" src="img/slideshow1.jpg" alt="First slide">
+					  <img class="d-block img-fluid" width="100%" src="img/slideshow1.jpg" alt="First slide">
 					</div>
 					<div class="carousel-item">
-					  <img class="d-block img-fluid" src="img/slideshow2.jpg" alt="Second slide">
+					  <img class="d-block img-fluid" width="100%" src="img/slideshow2.jpg" alt="Second slide">
 					</div>
 					<div class="carousel-item">
-					  <img class="d-block img-fluid" src="img/slideshow3.jpg" alt="Third slide">
+					  <img class="d-block img-fluid" width="100%" src="img/slideshow3.jpg" alt="Third slide">
 					</div>
 				  </div>
 				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -93,43 +148,60 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-12">
-				<h3>O festivalu</h3>
-				<p>
+				<div class="col-sm-2">
+				<h2>O festivalu</h2>
+				<hr></hr>
+				</div>
+				<p class="introduction">
 					Ono što ga je krasilo svih proteklih godina jeste činjenica da je bio širom otvoren za sve kinematografije sveta, i za sve relevantne autore, ali i filmove koji se neće naći na bioskopskom repertoaru. Kolika je važnost FEST-a ogleda se i u činjenici da je beogradska publika - sa filmovima nekih od najvećih reditelja današnjice kao što su Teo Angelopulos, Bob Rafelson, Volker Šlendorf, Dejvid Kronenberg, Ken Rasel, Vim Venders, Kišlovski, Hercog... imala priliku da se po prvi put sretne upravo na FEST-u.</p>
-				<p>
+				<p class="introduction">
 					Već prvi FEST počeo je prilično spektakularno, na njemu su se našli: ”Odiseja u svemiru” Stenlija Kubrika, ”Goli u sedlu” Denisa Hopera, pomenuti ”Meš” Roberta Altmana, filmovi Erika Romera, Luisa Bunjuela, Živojina Pavlovića... Iako mnogi, iz nostalgije ali i s pravom, smatraju prvo izdanje FEST-a neprevaziđenim, istina je da smo i u narednim godinama na FEST-u gledali filmove koji će ostati zabeleženi u istoriji svetske kinematografije. U istoriju festivala upisani su i mnogobrojni veliki svetski glumci i reditelji koji su bili gosti festivala: Marčelo Mastrojani, Harvi Kajtel, Liv Ulman, Bernardo Bertoluči, Sofija Loren, Robert De Niro, Antonioni, Džoni Dep, Miloš Forman, Katrin Danev, Vim Venders, Abaz Kjarostami, Hana Šigula, prethodno pomenuti autori Rafelson, Šlendorf, Rasel... lista je veoma impresivna, časna i duga.
 				</p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row paragraf">
+			<div class="col-sm-12">
+				<div class="col-sm-3">
+					<h2>Najnoviji filmovi</h2>
+					<hr>
+				</div>
+			</div>
+		</div>
+		<div class="row sadrzaj">
 			<div class="col-sm-6">
 				<img class="img img-responsive" style="width:100%;" src="img/redsparrow.jpg">
 			</div>
 			<div class="col-sm-6">
-			<h3>Naslov 1</h3>
-			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+			<h3>Izdaja</h3>
+			<p>
+				Priča je adaptacija špijunskog romana Džejsona Metjusa, smeštena u modernoj Rusiji, koja prati operativca Dominiku Jegorovu (Dženifer Lorens). Ona dobija naređenje da, mimo njene volje, postane “vrabac”, odnosno obučena zavodnica na zadataku i da prati mladog Cija agenta Natanijela Neša, koji je dobio ulogu da istraži ruski obaveštajni sistem. Između njih dvoje se javlja privlačnost, ali se emotivnom vezom izlažu velikom riziku. Do još jednog preokreta dolazi kada i nju angažuje Cija da otkrije izdajnika na visokom nivou u Vašingtonu.
+			</p>
 			<br>
 			<a href=""><button class="btn btn-read-more">Pročitaj više</button></a>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row sadrzaj">
 			<div class="col-sm-6">
-			<h3>Naslov 1</h3>
-			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+			<h3>Deadpool 2</h3>
+			<p>
+				Ne bi li nekako sebi zabiberio život, a u potrazi za kondenzatorom fluksa, Vejd mora da se bori protiv nindži, jakuza i čopora seksualno agresivnih pasa, putujući po svetu i otkrivajući važnost porodice, prijatelja i ukusa. Ono što će naći jeste dašak avanture i nešto za čime je žudeo, a to je šolja za kafu s titulom „Najbolji ljubavnik na svetu" na njoj.
+			</p>
 			<br>
 			<a href=""><button class="btn btn-read-more">Pročitaj više</button></a>
 			</div>
 			<div class="col-sm-6">
-				<img class="img img-responsive" style="width:100%;" src="img/redsparrow.jpg">
+				<img class="img img-responsive" style="width:100%;" src="img/deadpool.jpg">
 			</div>
 		</div>
-		<div class="row">
+		<div class="row sadrzaj">
 			<div class="col-sm-6">
-				<img class="img img-responsive" style="width:100%;" src="img/redsparrow.jpg">
+				<img class="img img-responsive" style="width:100%;" src="img/laracroft.jpg">
 			</div>
 			<div class="col-sm-6">
-			<h3>Naslov 1</h3>
-			It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+			<h3>Tomb Raider</h3>
+			<p>
+				Lara Kroft je strastvena, samostalna devojka i ćerka ekscentričnog pustolova koji je nestao dok je ona još bila tinejdžerka. Sada, nakon sedam godina, Lara nema nikakav stvaran cilj ili svrhun ona odbija da preuzme uzde carstva svog oca jednako kao što odbija da prizna da je stvarno otišao. Protiveći se očevim poslednjim željama Lara odlučuje da ostavi sve iza sebe kako bi rešila zagonetku njegovog misterioznog nestanka, a svoju potragu započinje istraživanjem poslednje lokacije na kojoj je viđen.
+			</p>
 			<br>
 			<a href=""><button class="btn btn-read-more">Pročitaj više</button></a>
 			</div>
@@ -137,7 +209,7 @@
 		<br>
 		</div>
 	</div>
-	<footer class="page-footer font-small white pt-0" style="border-top:5px solid black;border-bottom:5px solid black; background-color:white;">
+	<footer class="page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
 		<div class="footer-copyright py-3 text-center">
         <i>© 2018 Copyright: Jovanović Tijana, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
 		</i>

@@ -1,23 +1,18 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/kontakt.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/ofestivalu.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<title>Festival - O Festivalu</title>
+		<script src="js/ofestivalu.js"></script>
 		<script language="javascript">
-		function pritisnuoPosalji(){
-			document.getElementById('rezultat').innerHTML='<div class="alert alert-success"><b>Hvala na komentaru!</b></div>';
-		}
-		
 		
 		</script>
-		<title>Festival - Kontakt</title>
 	</head>
-	<body style="background-color:#F2F2F2;">
-	
+	<body style="background-color:#F2F2F2;" onload="nextComm()">
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
@@ -27,17 +22,17 @@
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
-			<ul class="navbar-nav mx-auto text-center nav-ul">
-				<li class="nav-item">
-					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+			<ul class="nav-ul navbar-nav mx-auto text-center">
+				<li class="nav-item active activeLink">
+					<a class="nav-link" href="#">Početna <span class="sr-only">(current)</span></a>
 				  </li>
-				  <li class="nav-item dropdown  active activeLink">
+				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Festival
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
 					  <a class="dropdown-item" href="#">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Žiri</a>
 					  <a class="dropdown-item" href="#">Nagrade</a>
 					  <a class="dropdown-item" href="#">Sponzori</a>
 					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
@@ -72,18 +67,16 @@
 		</nav>
 		</div>
 		</div>
-	
-	
-		<nav class="navbar navbar-default navbar-fixed-top navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
-			<div class="container">
-			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
 			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center">
-				<li class="nav-item">
-					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Početna <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -91,7 +84,7 @@
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
 					  <a class="dropdown-item" href="#">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Žiri</a>
 					  <a class="dropdown-item" href="#">Nagrade</a>
 					  <a class="dropdown-item" href="#">Sponzori</a>
 					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
@@ -119,58 +112,76 @@
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
 				&nbsp;&nbsp;&nbsp;
-				<li class="nav-item"><a class="nav-link" href="kontaktENG.html"><img src="img/eng-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
 			</ul>
 			</div>
 			</div>
 		</nav>
 		
-		
 		<div class="container-fluid">
-		<div class="row">
-		<div class="offset-sm-1 col-sm-9">
 			<div class="row">
-				<div class="offset-sm-5 col-sm-4" style="background-color:#f2f2f2!important">
-					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
-					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
-						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Početna</a></li>
-						<li class="breadcrumb-item">Festival</li>
-						<li class="breadcrumb-item active" aria-current="page">Kontakt</li>
-					  </ol>
-					</nav>
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-4">
+							<h1>O Festivalu</h1>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<p>Beogradski međunarodni filmski festival FEST ove godine više nego ikada biće most između domaćeg, dominantno komercijalnog, bioskopskog repertoara i najvažnijih filmova nastalih između dva festivalska izdanja. Filmovi reditelja iz svih delova sveta tokom deset festivalskih dana ponovo će biti glavna tema publike koja je svoj dobar ukus gradila upravo na ovom festivalu sa gotovo poluvekovnom tradicijom. Od naslova koji su već prepoznati i nagrađeni u svetu do ostvarenja čije će prikazivanje na Festu biti, sasvim je sigurno, jedina javna projekcija u ovom delu naše planete, svi su tu u festivalskim dvoranama širom Beograda, grada koji od 23. 2. do 4. 3. 2018. ponovo postaje i prestonica filma.</p>
+							<hr>
+							<iframe width="100%" height="50%" src="https://www.youtube.com/embed/ZFhRDb51Oug?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<h1>Drugi o Festivalu</h1>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						<!-- Slideshow container -->
+						<div class="slideshow-container1">
+
+						  <!-- Full-width slides/quotes -->
+						  <div class="mySlides1">
+							<q>Muzički dokumentarni film je inače jedan od žanrova koji je u najvećoj ekspanziji u poslednjih deset godina u svijetu filma, i drago mi je da i Kragujevac dobija jedan takav festival, na kojem će publika imati priliku da vidi najrecentnija izdanja, vrlo kvalitetnih, vrlo zabavnih, vrlo poučnih filmova o muzici, muzičarima i svemu onome što muzika danas znači</q>
+							<p class="author1">- Nenad Jezdić</p>
+						  </div>
+
+						  <div class="mySlides1">
+							<q>Beogradski međunarodni filmski festival ove godine više nego ikada biće most između domaćeg, dominantno komercijalnog, bioskopskog repertoara i najvažnijih filmova nastalih između dva festivalska izdanja. Uvek rado posećujem ovaj festival sa suprugom iako ne volimo isti žanr.</q>
+							<p class="author1">- Sloboda Mićalović</p>
+						  </div>
+
+						  <div class="mySlides1">
+							<q>Čak 116 premijernih naslova našlo se na ovogodišnjem FEST-u, a za one koji tokom deset festivalskih dana nisu uspeli da pogledaju sve što su želeli, tu je postFESTum. 5. marta u Sava centru, Domu omladine, DKC-u, Fontani, Kinoteci i CZK Vlada Divljan biće održane projekcije nekih od najtraženijih</q>
+							<p class="author1">- Dimitrije Banjac</p>
+						  </div>
+
+						  <!-- Next/prev buttons -->
+						  <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+						  <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+
+						<!-- Dots/bullets/indicators -->
+						<div class="dot-container1">
+						  <span class="dot1" onclick="currentSlide(1)"></span> 
+						  <span class="dot1" onclick="currentSlide(2)"></span> 
+						  <span class="dot1" onclick="currentSlide(3)"></span> 
+						</div>
+						</div>
+					</div>
 				</div>
+				<div class="col-sm-2"></div>
 			</div>
-			<div class="row">
-				<div class="col-sm-10">
-					<h2>Kontakt</h2>
-					<p>Ukoliko imate neka pitanja, sugestije ili komentare, budite slobodni da nam posaljete.</p>
-					<form method="post" action="" id="contactfrm" role="form">
-						<div class="form-group">
-							<label for="name">Ime</label>
-							<input type="text" class="form-control" name="name" id="name" placeholder="Unesite ime" title="Unesite svoje ime">
-						</div>
-						<div class="form-group">
-							<label for="email">Email</label>
-							<input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email">
-						</div>
-						<div class="form-group">
-							<label for="comments">Vaš komentar</label>
-								<textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Unesite vašu poruku..." title="Unesite vašu poruku"></textarea>
-						</div>
-						<button name="dugme" type="button" class="btn btn-lg btn-read-more" id="posalji" onclick="pritisnuoPosalji()">Pošalji</button>
-						
-					</form>
-					<div id="rezultat" ></div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-2">
-			Prostor za banere
-		</div>
-		</div>
 		</div>
 		
-		<footer class="page-footer font-small white pt-0" style="border-top:5px solid black;border-bottom:5px solid black; background-color:white;">
+		
+		<footer class="page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
 		<div class="footer-copyright py-3 text-center">
         <i>© 2018 Copyright: Jovanović Tijana, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
 		</i>

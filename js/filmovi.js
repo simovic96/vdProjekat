@@ -1,18 +1,5 @@
 
-		var brojac = 0;
-		var rezervacija = 0;
-		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/D86RtevtfrA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/20bpjtCbCz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/3aYUjm35wN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xZNBFcwd7zc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-		function prethodni() {
-			brojac = (brojac==0)?3:(brojac-1);
-			popuniDiv();
-		}
-		function sledeci() {
-			brojac = (brojac+1)%4;
-			popuniDiv();
-		}
-		function popuniDiv() {
-			document.getElementById('popuni').innerHTML = niz[brojac];
-		}
+		
 		
 		
 		function rezervisi() {

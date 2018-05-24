@@ -1,35 +1,18 @@
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Festival - DeadPool2</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
-		<link rel="stylesheet" href="css/glumci.css">
-		<link rel="stylesheet" href="css/lightbox.min.css">
-		<script src="js/mojifilmovi.js"></script>
+		<link rel="stylesheet" href="css/ofestivalu.css">
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
-		<script src="js/lightbox-plus-jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/filmoviENG.js"></script>
+		<title>Festival - About</title>
+		<script src="js/ofestivalu.js"></script>
 		<script language="javascript">
-		var rezervacija = 0;
-		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/D86RtevtfrA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/20bpjtCbCz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/3aYUjm35wN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xZNBFcwd7zc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-		function prethodni() {
-			brojac = (brojac==0)?3:(brojac-1);
-			popuniDiv();
-		}
-		function sledeci() {
-			brojac = (brojac+1)%4;
-			popuniDiv();
-		}
-		function popuniDiv() {
-			document.getElementById('popuni').innerHTML = niz[brojac];
-		}
+		
 		</script>
 	</head>
-	<body>
+	<body style="background-color:#F2F2F2;" onload="nextComm()">
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
@@ -43,7 +26,7 @@
 				<li class="nav-item">
 					<a class="nav-link" href="indexENG.html">Home <span class="sr-only">(current)</span></a>
 				  </li>
-				  <li class="nav-item dropdown">
+				  <li class="nav-item dropdown active activeLink">
 					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Festival
 					</a>
@@ -55,7 +38,7 @@
 					  <a class="dropdown-item" href="kontaktENG.html">Contact</a>
 					</div>
 				  </li>
-				  <li class="nav-item dropdown active activeLink">
+				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Program
 					</a>
@@ -80,7 +63,7 @@
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
 				&nbsp;&nbsp;&nbsp;
-				<li class="nav-item"><a class="nav-link" href="deadpool2.html"><img src="img/srb-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href="ofestivalu.html"><img src="img/srb-logo.png"></a> </li>
 			</ul>
 			</div>
 			</div>
@@ -145,124 +128,81 @@
 					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
 					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
 						<li class="breadcrumb-item"><a href="indexENG.html" class="breadcrumb-link">Home</a></li>
-						<li class="breadcrumb-item">Program</li>
-						<li class="breadcrumb-item"><a href="filmoviENG.html" class="breadcrumb-link">Movies</a></li>
-						<li class="breadcrumb-item active" aria-current="page">DeadPool 2</li>
+						<li class="breadcrumb-item">Festival</li>
+						<li class="breadcrumb-item active" aria-current="page">About</li>
 					  </ol>
 					</nav>
 				</div>
 			</div>
 					<div class="row">
-						<div class="col-sm-12">
-							<table><tr><td width="50%"><h2>Deadpool 2</h2></td><td width="50%"><center><button type="button" class="btn btn-outline-secondary" onclick="dodaj(1)" align="left">Add to favorites</button></td></tr></table>
+						<div class="col-sm-4">
+							<h1>About festival</h1>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-12" style="min-height:30%">
-							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/deadpool-poster.jpg">
-							<h3>About</h3>
+						<div class="col-sm-12">
 							<p>
-							Dedpul (енгл. Deadpool) izmišljeni je lik, plaćenik i anti-heroj, koji se pojavljuje u stripovima izdavačke kuće Marvel Komiks. Stvoren od strane crtača Rob Laefeld i pisca Fabian Ničeica, Dedpul se prvi put pojavio u Novi Mutanti (eng. New Mutants) #98 (Feb. 1991).
-							</p>
-							<p>
-							Unakaženog tela i mentalno nestabilan plaćenik Dedpul se prvobitno pojavljivao kao zlikovac u broju strip-časopisa Novi Mutanti , i kasnijim izdanjima X-Sila (eng. X-Force). Lik se od tad pojavljivao u nekoliko tekućih serija stip-časopisa, i delio naslove stripa sa drugim likovima kao što su Kejbl (eng.Cable). Takođe poznat kao "Brbljivi plaćenik," Dedpul je poznat po svojoj pričljivoj prirodi i sklonosti da "razbije četvrti zid" , koji je koriščen od strane pisaca radi humorističkog efekta.
-							</p>
-							<p>
-							Dedpul je rangiran 182 na Wizard liste časopisa 200 Najboljih likova strip-časopisa svih vremena,; rangiran 45 na Empajer listi 50 najčuvenih likova strip-časopisa, i postavljen 31 na IGN listi 100 heroja strip-časopisa Glumio ga je Rajan Rejnold 2009 u filmu "X-men Počeci: Vulverin". Stvoren od strane crtača Rob Laefeld i pisca Fabian Ničeica, Dedpul se prvi put pojavio u stranicama "Novi Mutanti" #98 broju objavljen u februaru 1991. Rob Laefeld, obožavalac "Tinejdžerski titani" strip-časopisa, pokazao je svoj novi lik tadašnjem piscu Fabian Ničeica. Kada je video kostim i opazio karakteristike (ubica sa super agilnošču), Ničeica je nazvao Laefelda, govorećimu "da je ovo Dedstrouk (eng. Deathstroke) iz "Tinejdžerskih titana."
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-						
+This year's Belgrade International Film Festival will more than ever feature a bridge between domestic, dominantly commercial, cinema repertoire and the most important films created between two festival editions. Film directors from all parts of the world during ten festival days will again be the main topic of the audience, which has built its good taste right at this festival with almost half a century of tradition. From the titles that have already been recognized and awarded in the world to a performance whose appearance on Fest will be, it is quite certain, the only public projection in this part of our planet, they are all present in festival halls throughout Belgrade, a city that from 23rd to 4th 3. In 2018 it again becomes the capital of the film. </p>
 							<hr>
-							<h2>Trejler</h2>
+							<iframe width="100%" height="50%" src="https://www.youtube.com/embed/ZFhRDb51Oug?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-12">
-							<div id="popuni" width="100%" height="50%">
-								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/D86RtevtfrA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-							</div>
-							<br>
-							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
-							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+						<div class="col-sm-4">
+							<h1>Others about festival</h1>
 							<hr>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" style="margin-bottom:10px;">
 						<div class="col-sm-12">
-						<h2>Galerija</h2>
-						<hr>
-						</div>
-					</div>
-					<div class="row" height="25%">
-						<div class="col-sm-12">
-							<center><a class="example-image-link" href="img/dp1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp1.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/dp2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp2.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/dp3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp3.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/dp4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp4.jpg" alt="image-1" /></a></center>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<hr>
-							<h2>Najbliža projekcija</h2>
-							<hr>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div id="map"style="width:100%;height:400px;"></div>
-							<div id="map"></div>
-							<script>
+						<!-- Slideshow container -->
+						<div class="slideshow-container1">
 
-							  function initMap() {
-								var myLatLng = {lat: 44.773437, lng: 20.473611};
+						  <!-- Full-width slides/quotes -->
+						  <div class="mySlides1">
+							<q>
+Music documentary is one of the genres that has been in the biggest expansion in the last ten years in the film world, and I am pleased that Kragujevac will receive such a festival, in which the audience will have the opportunity to see the most relevant editions, high quality, very entertaining, very instructive films about music, musicians and everything that music means today </q>
+							<p class="author1">- Nenad Jezdić</p>
+						  </div>
 
-								var map = new google.maps.Map(document.getElementById('map'), {
-								  zoom: 15,
-								  center: myLatLng
-								});
-								var marker = new google.maps.Marker({
-								  position: myLatLng,
-								  map: map,
-								  title: 'Hello World!'
-								});
-							  }
-							</script>
-							<script async defer
-							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap">
-							</script>
+						  <div class="mySlides1">
+							<q>
+This year's Belgrade International Film Festival will more than ever be a bridge between the domestic, dominantly commercial, cinema repertoire and the most important films created between two festival editions. I always like to visit this festival with my wife even though we do not like the same genre. </q>
+							<p class="author1">- Sloboda Mićalović</p>
+						  </div>
+
+						  <div class="mySlides1">
+							<q>
+Even 116 premiere titles were found at this year's FEST, and for those who during ten days of the festival did not manage to look at everything they wanted, postFESTum is here. On March 5, in the Sava Center, Dom omladine, DKC, Fontana, Kinoteci and CZK Vladan Divljan, projections of some of the most wanted ones will be held </q>
+							<p class="author1">- Dimitrije Banjac</p>
+						  </div>
+
+						  <!-- Next/prev buttons -->
+						  <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+						  <a class="next1" onclick="plusSlides(1)">&#10095;</a>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<hr>
-							
-							<div id="rezId">
-							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
-							</div>
-							<hr>
+
+						<!-- Dots/bullets/indicators -->
+						<div class="dot-container1">
+						  <span class="dot1" onclick="currentSlide(1)"></span> 
+						  <span class="dot1" onclick="currentSlide(2)"></span> 
+						  <span class="dot1" onclick="currentSlide(3)"></span> 
+						</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-2">
-					Prostor za banere
-				</div>
+				<div class="col-sm-2"></div>
 			</div>
 		</div>
 		
 		
-		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<footer class="page-footer font-small white pt-0" style="border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
 		<div class="footer-copyright py-3 text-center">
         <i>© 2018 Copyright: Jovanović Tijana, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
 		</i>
-		</div>
-		</footer>
-	
-	
+    </div>
+	</footer>
 	</body>
 </html>

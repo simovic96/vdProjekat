@@ -7,7 +7,8 @@ var niz = new Array('<div class="row sadrzaj" id="1"><div class="col-sm-5"><img 
 		} else {
 			localStorage.setItem(broj,trenutno+1);
 		}
-	}}
+	}
+	alert("Uspešno dodat");}
 function izlistaj() {
 	var i;
 	var podaci;

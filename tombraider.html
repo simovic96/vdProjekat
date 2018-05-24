@@ -1,0 +1,264 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Festival - Tomb Raider</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/glumci.css">
+		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/lightbox-plus-jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script language="javascript">
+		var brojac = 0;
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/8ndhidEmUbI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/3KkhD0MnaJU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/XYtyeqVQnRI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/7AEmF0un5ow" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		function prethodni() {
+			brojac = (brojac==0)?3:(brojac-1);
+			popuniDiv();
+		}
+		function sledeci() {
+			brojac = (brojac+1)%4;
+			popuniDiv();
+		}
+		function popuniDiv() {
+			document.getElementById('popuni').innerHTML = niz[brojac];
+		}
+		</script>
+		<script>
+		var rezervacija = 0;
+		function rezervisi() {
+			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>';
+			if (rezervacija==0) {
+				unos='<form method="post" action="" id="contactfrm" role="forma"><div class="form-group"><label for="ime">Ime</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Prezime</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telefon</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Unesite telefon" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji()">Potvrdi rezervaciju</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Otkaži rezervaciju</button></td></tr></table></form>';
+			}
+			document.getElementById("rezId").innerHTML=unos;
+			rezervacija = (rezervacija+1)%2;
+		}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center nav-ul">
+				<li class="nav-item active activeLink">
+					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2>Tomb Raider</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12" style="min-height:30%">
+							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/laracroftposter.jpg">
+							<h3>O filmu</h3>
+							<p>
+							Tomb Raider je američki akciono avanturistički film iz 2018. godine reditelja Rara Utauga na osnovu istoimene video igre iz 2013. godine. Producent filma je Grejam King. Scenario potpisuju Dženeva Robertson Dvort i Elastir Sidons. Muziku je komponovao Džanki XL.
+</p><p>
+Naslovnu ulogu tumači Alisija Vikander kao Lara Kroft, a u ostalim ulogama su Dominik Vest, Volton Gogins, Daniel Vu, Kristin Skot Tomas, Derek Džakobi i Nik Frost. Svetska premijera filma je bila održana 14. marta 2018. u Ujedinjenom Kraljevstvu dok je se u Sjedinjenim Američkim Državama počeo prikazivati 16. marta 2018.
+</p><p>Budžet filma je iznosio 94 000 000 dolara. Lara Kroft (Alisija Vikander) je strastvena, samostalna devojka i ćerka ekscentričnog pustolova koji je nestao dok je ona još bila tinejdžerka. Sada, nakon sedam godina, Lara nema nikakav stvaran cilj ili svrhu ona odbija da preuzme uzde carstva svog oca jednako kao što odbija da prizna da je stvarno otišao.
+</p><p>
+Protiveći se očevim poslednjim željama, Lara odlučuje da ostavi sve iza sebe kako bi rešila zagonetku njegovog misterioznog nestanka, a svoju potragu započinje istraživanjem poslednje lokacije na kojoj je bio viđen.
+							</p>
+							<p>
+								Serijal igara doživeo je dve filmske adaptacije, Lara Kroft: Pljačkaš grobnica 2001. godine i Kolevka života iz 2003. godine. Pojavile su se naznake trećeg filma 2007. godine a zvanično je najavljen za 2009. godinu. Filmska prava kupili je GK Film 2011. godine, a 2015. godine potvrdili su izbor režisera i produkciju filma od strane GK Films, Vorner Bros i MGM studija. Animirana serija bazirana na karakteru Lare Kroft pojavila se 2007. godine i emitovana je od strane Gejm Tap onlajn igračkog servisa, kao deo serije oživljavanja popularnih video igara. Emitovana je između maja i juna 2007. godine pod imenom Tomb Rajder: Revizija. Iako je produkcijski tim imao veliku kreativnu slobodu karakter Lare Kroft nije smeo da odstupa od originalnog koncepta.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						
+							<hr>
+							<h2>Trejler</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="popuni" width="100%" height="50%">
+								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/8ndhidEmUbI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<br>
+							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
+							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						<h2>Galerija</h2>
+						<hr>
+						</div>
+					</div>
+					<div class="row" height="25%">
+						<div class="col-sm-12">
+							<center><a class="example-image-link" href="img/tr1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/tr1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/tr2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/tr2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/tr3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/tr3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/tr4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/tr4.jpg" alt="image-1" /></a></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							<h2>Najbliža projekcija</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="map"style="width:100%;height:400px;"></div>
+							<div id="map"></div>
+							<script>
+
+							  function initMap() {
+								var myLatLng = {lat: 44.8023774, lng: 20.468924};
+
+								var map = new google.maps.Map(document.getElementById('map'), {
+								  zoom: 15,
+								  center: myLatLng
+								});
+								var marker = new google.maps.Marker({
+								  position: myLatLng,
+								  map: map,
+								  title: 'Hello World!'
+								});
+							  }
+							</script>
+							<script async defer
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap">
+							</script>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							
+							<div id="rezId">
+							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
+							</div>
+							<hr>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					Prostor za banere
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<div class="footer-copyright py-3 text-center">
+        <i>© 2018 Copyright: Jovanovic Tijana, Simovic Aleksa, Odsek za softversko inženjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu
+		</i>
+		</div>
+		</footer>
+	
+	
+	</body>
+</html>

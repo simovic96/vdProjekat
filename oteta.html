@@ -1,0 +1,265 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Festival - Oteta</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/glumci.css">
+		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/lightbox-plus-jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script language="javascript">
+		var brojac = 0;
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xKQLVgrrvxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/trzgrWXs3ag" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/rJiml5xzK68" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/Eh9NVtdrjaU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		function prethodni() {
+			brojac = (brojac==0)?3:(brojac-1);
+			popuniDiv();
+		}
+		function sledeci() {
+			brojac = (brojac+1)%4;
+			popuniDiv();
+		}
+		function popuniDiv() {
+			document.getElementById('popuni').innerHTML = niz[brojac];
+		}
+		</script>
+		<script>
+		var rezervacija = 0;
+		function rezervisi() {
+			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>';
+			if (rezervacija==0) {
+				unos='<form method="post" action="" id="contactfrm" role="forma"><div class="form-group"><label for="ime">Ime</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Prezime</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telefon</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Unesite telefon" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji()">Potvrdi rezervaciju</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Otkaži rezervaciju</button></td></tr></table></form>';
+			}
+			document.getElementById("rezId").innerHTML=unos;
+			rezervacija = (rezervacija+1)%2;
+		}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center nav-ul">
+				<li class="nav-item active activeLink">
+					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2>Oteta</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12" style="min-height:30%">
+							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/taken-poster.jpg">
+							<h3>O filmu</h3>
+							<p>
+							96 sati (engl. Taken) francuski je akcioni triler film iz 2008. na engleskom jeziku reditelja Pjera Morela. Scenaristi su Lik Beson i Robert Mark Kejmen. Producent filma je Lik Beson. Muziku je komponovao Natanijel Mešali.
+</p><p>
+Glumačku ekipu čine Lijam Nison, Megi Grejs, Famke Jansen, Liland Orser, Džon Grajs, Dejvid Varšovski, Kejti Kasidi i Holi Valans.
+</p><p>
+Film je zaradio više od 226 miliona dolara. Brojni mediji naveli su film kao prekretnicu u Nisonovoj karijeri koja ga je redefinisala i transformisala u akcionu filmsku zvezdu.[1][2] Svetska premijera filma je bila 30. januara 2008. u SAD. Budžet filma je iznosio 22.000.000 dolara. Godine 2012. godine je snimljen nastavak 96 sati: Istanbul.
+							</p><p>
+								Šta može biti gore za jednog oca od bespomoćnog sedenja s druge strane telefonske linije dok mu otimaju kćerku? To je noćna mora koja postaje stvarnost za Brajana (Lijam Nison), bivšeg tajnog agenta, koji ima samo 96 sati da vrati svoju ćerku Kim (Megi Grejs) iz ruku stravične bande specijalizovane za prodaju mladih žena. Prvi problem koji Brajan mora da reši je taj da je on u Los Anđelesu, a Kim je oteta u Parizu.
+							</p><p>
+								Slavni reditelj Lik Beson (koji je učestvovao u pisanju scenarija za film "96 sati: Istanbul" i producirao ga), koscenarista Robert Mark Kejmen (koji je s Besonom napisao scenarija za oba filma serijala "Taken") i reditelj Olivije Megaton donose nam film "96 sati: Istanbul", koji prati uspeh filma "Taken" iz 2008. godine.
+Gledaoci su u filmu "Taken" navijali za Nisona, oca koji se preterano zaštitnički odnosi prema ćerki i čije veštine – usavršene tokom godina tajnih operacija – dolaze na probu godinama nakon što je penzionisan posle rada za CIA. Odlučan da spase ćerku koja je oteta iz pariskog stana, Brajan u filmu kreće na putovanje koje u sekundi može da shvati svako ko je roditelj. Ovog puta će u borbi za goli život imati podršku i članova svoje porodice.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						
+							<hr>
+							<h2>Trejler</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="popuni" width="100%" height="50%">
+								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xKQLVgrrvxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<br>
+							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
+							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						<h2>Galerija</h2>
+						<hr>
+						</div>
+					</div>
+					<div class="row" height="25%">
+						<div class="col-sm-12">
+							<center><a class="example-image-link" href="img/t1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/t2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/t3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/t4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t4.jpg" alt="image-1" /></a></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							<h2>Najbliža projekcija</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="map"style="width:100%;height:400px;"></div>
+							<div id="map"></div>
+							<script>
+
+							  function initMap() {
+								var myLatLng = {lat: 44.800377, lng: 20.470014};
+
+								var map = new google.maps.Map(document.getElementById('map'), {
+								  zoom: 15,
+								  center: myLatLng
+								});
+								var marker = new google.maps.Marker({
+								  position: myLatLng,
+								  map: map,
+								  title: 'Hello World!'
+								});
+							  }
+							</script>
+							<script async defer
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap">
+							</script>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							
+							<div id="rezId">
+							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
+							</div>
+							<hr>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					Prostor za banere
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<div class="footer-copyright py-3 text-center">
+        <i>© 2018 Copyright: Jovanovic Tijana, Simovic Aleksa, Odsek za softversko inženjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu
+		</i>
+		</div>
+		</footer>
+	
+	
+	</body>
+</html>

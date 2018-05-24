@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Festival - Glumci</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
@@ -12,7 +13,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script language="javascript">
 		var brojac = 0;
-		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/aDshY43Ol2U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/7uDuFh-nC-c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/jiHDJ19A3dk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/DfBccnAcuwg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/PmUL6wMpMWw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/rUy7JEBu0F4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/LaixeZoLoFk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/jOTLVy7kgXA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 		function prethodni() {
 			brojac = (brojac==0)?3:(brojac-1);
 			popuniDiv();
@@ -25,7 +26,17 @@
 			document.getElementById('popuni').innerHTML = niz[brojac];
 		}
 		</script>
-		
+		<script>
+		var rezervacija = 0;
+		function rezervisi() {
+			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>';
+			if (rezervacija==0) {
+				unos='<form method="post" action="" id="contactfrm" role="forma"><div class="form-group"><label for="ime">Ime</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Prezime</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telefon</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Unesite telefon" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji()">Potvrdi rezervaciju</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Otkaži rezervaciju</button></td></tr></table></form>';
+			}
+			document.getElementById("rezId").innerHTML=unos;
+			rezervacija = (rezervacija+1)%2;
+		}
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -137,31 +148,28 @@
 				<div class="offset-sm-1 col-sm-9">
 					<div class="row">
 						<div class="col-sm-12">
-							<h2>Liam Neeson</h2>
+							<h2>Izdaja</h2>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-12">
-							<img class="img img-responsive" style="width:40%; float:left; margin-right:10px;" src="img/liamneeson-opis.jpg">
-							<h3>Osnovno</h3>
+						<div class="col-sm-12" style="min-height:30%">
+							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/redsparrow-poster.jpg">
+							<h3>O filmu</h3>
 							<p>
-							Lijam Nison (umetničko ime Liam Neeson, pravo William John Neeson) je britanski glumac. Rođen je 7. juna 1952. u Balimeni (Ballymena), gradu Severne Irske. Majka mu se zove Ketrin (Katherine Brown), a otac Bernard Nison (Bernard Neeson).
+							Konačno je objavljen zvanični trailer za špijunski triler "Red Sparrow" u kojem će ponovo zasijati jedna od najplaćenijih glumica na svetu Jennifer Lawrence. Filmsko ostvarenje austrijskog reditelja Francisa Lawrencea donosi priču koja je utemeljena na romanu člana CIA-e Jasona Matthewsa koji je iz ove agencije izašao 2013. godine.
 							</p>
-							<h3>Detinjstvo i obrazovanje</h3>
 							<p>
-							Bavio se boksom od devete do sedamnaeste godine. U petnaestoj godini mu je u toku meča slomljen nos, ali je nastavio da boksuje. Radio je kao radnik na viljuškaru za fabriku piva Ginis (Guinness), kao vozač kamiona i asistent arhitekte. Želeo je da bude učitelj i pohađao je St. Mary’s Teaching College u Njukaslu (Newcastle). Na kratko je studirao fiziku i kompjuterske nauke na Queen’s University od Belfast. No, otkrio je da je gluma ipak njegov put. Bio je primljen na Bristol Old Vic Drama School u Engleskoj, ali je diplomirao je u dablinskoj Gaiety School of Drama, zato što je želeo da bude aktivan u Dublin Shakespeare Theatre-u.
+							Lawrence u filmu glumi Ruskinju Dominiku Egorovu koja je većinu života provela vežbajući balet. Međutim, nakon teške povrede, prisiljena je da nađe novi posao. Ona odlazi u tajnu školu ruske obaveštajne službe "Sparrow School" gde će je obučiti kako da koristi svoje telo kao oružje. Međutim, već tokom prve misije Dominika će napraviti grešku. Reditelj Lawrence, koji inače nije ni u kakvom srodstvu s Jennifer, proslavio je američku glumicu ulogom u filmovima "The Hunger Games".
 							</p>
-							<h3>Karijera</h3>
 							<p>
-							Dosta je glumio u pozorištu. 1976. godine se pridružio Belfast Lyric Players’ Theateru, a dve godine kasnije je prešao u Dublin Abbey Theater. Tu ga je i primetio Džon Burman (John Boorman) i ponudio mu prvu zapaženiju ulogu u filmu – Excalibur (1981). 1993. godine je prvi put nastupio na Brodveju (Broadway) u predstavi Annae Christie. Devedesetih je bio aktivan i u Kraljevskom nacionalnom teatru  u Londonu. Nisonova filmografija je impresivna. Najznačajniji filmovi u kojima je glumio su: Schindler’s list (1993), Les Misérables (1998), Star Wars: Episode I – The Phantom Menace (1999), Gangs of New York (2002), Love Actually (2003), Batman Begins (2005), The A-Team (2010), The Dark Knight Rises (2012), Clash of the Titans (2010) i nastavak Wrath of the Titans (2012), Taken (2008) i nastavci Taken 2 (2012) i Taken 3 (2016).
+							Pored nje, u filmu glume još i Mary-Louise Parker, Joel Edgerton, Matthias Schoenaerts, Jeremy Irons, Ciaran Hinds i mnogi drugi. Film će premijerno biti prikazan u svetskim bioskopima 2. marta ove godine. Prema mišljenju filmskih kritičara, priča u kojoj se Lawrence iz balerine pretvara u ubicu, mogla bi doneti glumici veliku zaradu.
 							</p>
-							<h3>Privatni život</h3>
-							<p>Bio je oženjen Natašom Ričardson (Natasha Richardson) od 3. jula 1995. godine. Zbog venčanja sa ovom glumicom odrekao se uloge tajnog agenta Džejmsa Bonda (James Bond). Par je živeo skladno do njene smrti, 18. marta 2009. godine, kada je podlegla povredama nakon nesreće na skijanju u Kanadi. Imaju dva sina iz tog braka, Majkla (Micheál Richard Antonio Neeson), rođenog 22. juna 1995. godine i Danijela (Daniel Jack neeson), rođenog 27. avgusta 1996. godine.</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
+						
 							<hr>
 							<h2>Trejler</h2>
 							<hr>
@@ -170,26 +178,68 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div id="popuni" width="100%" height="50%">
-								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/aDshY43Ol2U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/PmUL6wMpMWw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 							<br>
 							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
 							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+							<hr>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
-						<hr>
 						<h2>Galerija</h2>
 						<hr>
 						</div>
 					</div>
+					<div class="row" height="25%">
+						<div class="col-sm-12">
+							<center><a class="example-image-link" href="img/rs1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/rs2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/rs3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/rs4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs4.jpg" alt="image-1" /></a></center>
+						</div>
+					</div>
 					<div class="row">
 						<div class="col-sm-12">
-							<center><a class="example-image-link" href="img/ln1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln1.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/ln2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln2.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/ln3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln3.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/ln4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln4.jpg" alt="image-1" /></a></center>
+							<hr>
+							<h2>Najbliža projekcija</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="map"style="width:100%;height:400px;"></div>
+							<div id="map"></div>
+							<script>
+
+							  function initMap() {
+								var myLatLng = {lat: 44.80565688, lng: 20.47632003};
+
+								var map = new google.maps.Map(document.getElementById('map'), {
+								  zoom: 15,
+								  center: myLatLng
+								});
+								var marker = new google.maps.Marker({
+								  position: myLatLng,
+								  map: map,
+								  title: 'Hello World!'
+								});
+							  }
+							</script>
+							<script async defer
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap">
+							</script>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							
+							<div id="rezId">
+							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
+							</div>
+							<hr>
 						</div>
 					</div>
 				</div>

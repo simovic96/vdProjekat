@@ -1,12 +1,31 @@
-
-		
-		
-		
-		function rezervisi() {
-			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezervisi kartu</button>';
-			if (rezervacija==0) {
-				unos='<form method="post" action="" id="contactfrm" role="forma"><div class="form-group"><label for="ime">Ime</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Prezime</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telefon</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Unesite telefon" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji()">Potvrdi rezervaciju</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Otkaži rezervaciju</button></td></tr></table></form>';
-			}
-			document.getElementById("rezId").innerHTML=unos;
-			rezervacija = (rezervacija+1)%2;
-		}
+function pritisnuoPosalji(broj) {
+	document.getElementById("porukaRez").innerHTML="";
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	broj = parseInt(broj);
+	var podaci=0;
+	if (document.forma.ime.value=="") {
+		document.getElementById("porukaRez").innerHTML = '<div class="alert alert-warning">Unesite ime!</div>';
+		return;
+	}
+	if (document.forma.prezime.value=="") {
+		document.getElementById("porukaRez").innerHTML = '<div class="alert alert-warning">Unesite prezime!</div>';
+		return;
+	}
+	if(document.forma.email.value=="" || re.test(document.forma.email.value)==false) {
+		document.getElementById("porukaRez").innerHTML = '<div class="alert alert-warning">Unesite korektno email!</div>';
+		return;
+	}
+	re = /^\d{3}\/\d{3}-\d{2}-\d{1,2}$/;
+	if (document.forma.telefon.value=="" || re.test(document.forma.telefon.value)==false) {
+		document.getElementById("porukaRez").innerHTML = '<div class="alert alert-warning">Unesite korektno telefon!</div>';
+		return;
+	}
+	if ('localStorage' in window && window.localStorage !== null) {
+		podaci=localStorage.getItem(broj+"1");
+		if (podaci!=null) {
+			podaci=parseInt(podaci);
+			podaci = podaci+1;
+		} else podaci=1;
+		localStorage.setItem(broj+"1", podaci);
+	}
+}

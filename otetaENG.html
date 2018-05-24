@@ -1,7 +1,8 @@
 <html>
+<html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Festival - Izdaja</title>
+		<title>Festival - Taken</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
@@ -11,10 +12,12 @@
 		<script src="js/lightbox-plus-jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/filmovi.js"></script>
+		<script src="js/filmoviENG.js"></script>
+		
+		<script src="js/mojifilmoviENG.js"></script>
 		<script language="javascript">
 		var brojac = 0;
-		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/PmUL6wMpMWw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/rUy7JEBu0F4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/LaixeZoLoFk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/jOTLVy7kgXA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xKQLVgrrvxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/trzgrWXs3ag" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/rJiml5xzK68" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/Eh9NVtdrjaU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 		function prethodni() {
 			brojac = (brojac==0)?3:(brojac-1);
 			popuniDiv();
@@ -30,60 +33,59 @@
 		<script language="javascript">
 		var rezervacija=0;
 		function rezervisi() {
-			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezervisi kartu</button>';
+			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Book a ticket</button>';
 			if (rezervacija==0) {
-				unos='<form method="post" action="" id="contactfrm" role="forma" name="forma"><div class="form-group"><label for="ime">Ime</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Prezime</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telefon</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Unesite telefon" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji(0)">Potvrdi rezervaciju</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Otkaži rezervaciju</button></td></tr><tr><div id="porukaRez"></div></tr></table></form>';
+				unos='<form method="post" action="" id="contactfrm" role="forma" name="forma"><div class="form-group"><label for="ime">First Name</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Write your first name" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Last Name</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Write your last name" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Write your email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telephone</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Write your telephone number" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji(1)">Confirm reservation</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Cancel reservation</button></td></tr><tr><div id="porukaRez"></div></tr></table></form>';
 			}
 			document.getElementById("rezId").innerHTML=unos;
 			rezervacija = (rezervacija+1)%2;
 		}
 		</script>
-		<script src="js/mojifilmovi.js"></script>
 	</head>
 	<body>
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
 		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
-			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<a href="indexENG.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
 			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
 				<li class="nav-item">
-					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="indexENG.html">Home <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Festival
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
-					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
-					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
-					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
-					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					  <a class="dropdown-item" href="ofestivaluENG.html">About</a>
+					  <a class="dropdown-item" href="ziriENG.html">Jury</a>
+					  <a class="dropdown-item" href="nagradeENG.html">Awards</a>
+					  <a class="dropdown-item" href="sponzoriENG.html">Sponsors</a>
+					  <a class="dropdown-item" href="kontaktENG.html">Contact</a>
 					</div>
 				  </li>
-				  <li class="nav-item dropdown  active activeLink">
+				  <li class="nav-item dropdown active activeLink">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Program
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
-					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
-					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					  <a class="dropdown-item" href="filmoviENG.html">Movies</a>
+					  <a class="dropdown-item" href="mestaprojekcijeENG.html">Projection places</a>
+					  <a class="dropdown-item" href="prodajnamestaENG.html">Selling places</a>
 					</div>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="glumci.html">Glumci</a>
+					<a class="nav-link" href="glumciENG.html">Actors</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="vesti.html">Vesti</a>
+					<a class="nav-link" href="vestiENG.html">News</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+					<a class="nav-link" href="mojifilmoviENG.html">My movies</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
@@ -91,7 +93,7 @@
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
 				&nbsp;&nbsp;&nbsp;
-				<li class="nav-item"><a class="nav-link" href="izdajaENG.html"><img src="img/eng-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href="oteta.html"><img src="img/srb-logo.png"></a> </li>
 			</ul>
 			</div>
 			</div>
@@ -147,16 +149,15 @@
 			</div>
 			</div>
 		</nav>
-		
 		<div class="container-fluid">
 		<div class="row">
 		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
 					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
 					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
-						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Pocetna</a></li>
+						<li class="breadcrumb-item"><a href="indexENG.html" class="breadcrumb-link">Home</a></li>
 						<li class="breadcrumb-item">Program</li>
-						<li class="breadcrumb-item"><a href="filmovi.html" class="breadcrumb-link">Filmovi</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Izdaja</li>
+						<li class="breadcrumb-item"><a href="filmoviENG.html" class="breadcrumb-link">Movies</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Taken</li>
 					  </ol>
 					</nav>
 				</div>
@@ -165,37 +166,44 @@
 				<div class="offset-sm-1 col-sm-9">
 					<div class="row">
 						<div class="col-sm-12">
-							<table><tr><td width="50%"><h2>Izdaja</h2></td><td width="50%"><center><button type="button" class="btn btn-outline-secondary" onclick="dodaj(0)" align="left">Dodaj u omiljene</button></td></tr></table>
+							<table><tr><td width="50%"><h2>Taken</h2></td><td width="50%"><center><button type="button" class="btn btn-outline-secondary" onclick="dodaj(3)" align="left">Add to favorites</button></td></tr></table>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12" style="min-height:30%">
-							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/redsparrow-poster.jpg">
-							<h3>O filmu</h3>
+							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/taken-poster.jpg">
+							<h3>About movie</h3>
 							<p>
-							Konačno je objavljen zvanični trailer za špijunski triler "Red Sparrow" u kojem će ponovo zasijati jedna od najplaćenijih glumica na svetu Jennifer Lawrence. Filmsko ostvarenje austrijskog reditelja Francisa Lawrencea donosi priču koja je utemeljena na romanu člana CIA-e Jasona Matthewsa koji je iz ove agencije izašao 2013. godine.
-							</p>
-							<p>
-							Lawrence u filmu glumi Ruskinju Dominiku Egorovu koja je većinu života provela vežbajući balet. Međutim, nakon teške povrede, prisiljena je da nađe novi posao. Ona odlazi u tajnu školu ruske obaveštajne službe "Sparrow School" gde će je obučiti kako da koristi svoje telo kao oružje. Međutim, već tokom prve misije Dominika će napraviti grešku. Reditelj Lawrence, koji inače nije ni u kakvom srodstvu s Jennifer, proslavio je američku glumicu ulogom u filmovima "The Hunger Games".
-							</p>
-							<p>
-							Pored nje, u filmu glume još i Mary-Louise Parker, Joel Edgerton, Matthias Schoenaerts, Jeremy Irons, Ciaran Hinds i mnogi drugi. Film će premijerno biti prikazan u svetskim bioskopima 2. marta ove godine. Prema mišljenju filmskih kritičara, priča u kojoj se Lawrence iz balerine pretvara u ubicu, mogla bi doneti glumici veliku zaradu.
-							</p>
+							
+96 hours Taken is a French action thriller film from 2008 in English by director Pierre Morel. Scenarists are Lick Beson and Robert Mark Cayman. Producer of the film is Lik Beson. The music was composed by Nathaniel Mixali.
+</p><p>
+The cast includes Liam Nison, Maggie Grace, Famke Jansen, Liland Orser, John Grajs, David Varschowski, Kate Cassidy and Holly Valans.
+
+</p><p>
+
+The film earned more than $ 226 million. Numerous media have listed the film as a turning point in Nison's career that redefined and transformed it into an action movie star. [1] [2] The film was premiered on January 30, 2008 in the United States. The film's budget was $ 22,000,000. In 2012, the 96 hours were recorded: Istanbul.
+							</p><p>
+								
+What could be worse for a father than helpless sitting on the other side of the phone line while snatching away his daughter? It's a nightmare that becomes a reality for Bryan (Liam Nison), a former secret agent, who only has 96 hours to return his daughter Kim (Megi Grace) from the hands of an awesome gang specializing in the sale of young women. The first problem Bryan has to solve is that he is in Los Angeles, and Kim is abducted in Paris.
+							</p><p>
+								
+Celebrity director Lik Beson (who took part in the scriptwriting for "96 Hours: Istanbul" and produced him), co-writer Robert Mark Kejmen (who with Beson wrote scenario for both films of the series "Taken") and director Olivia Megaton bring us a film "96 Hours: Istanbul", which tracks the success of the film "Taken" in 2008.
+The spectators in the Taken movie cheered for Nisona, a father who overly protects his daughter and whose skills - perfected during years of covert operations - come to trial for years after being retired after working for the CIA. Determined to save a daughter who was abducted from a Parisian apartment, Bryan moves on a journey that can be understood by anyone who is a parent in a second. This time, support for members of their family will be supported in the fight for naked life.</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
 						
 							<hr>
-							<h2>Trejler</h2>
+							<h2>Trailer</h2>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
 							<div id="popuni" width="100%" height="50%">
-								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/PmUL6wMpMWw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xKQLVgrrvxI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 							<br>
 							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
@@ -205,22 +213,22 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
-						<h2>Galerija</h2>
+						<h2>Gallery</h2>
 						<hr>
 						</div>
 					</div>
 					<div class="row" height="25%">
 						<div class="col-sm-12">
-							<center><a class="example-image-link" href="img/rs1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs1.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/rs2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs2.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/rs3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs3.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/rs4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs4.jpg" alt="image-1" /></a></center>
+							<center><a class="example-image-link" href="img/t1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/t2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/t3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/t4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/t4.jpg" alt="image-1" /></a></center>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
 							<hr>
-							<h2>Najbliža projekcija</h2>
+							<h2>The closest projection</h2>
 							<hr>
 						</div>
 					</div>
@@ -231,7 +239,7 @@
 							<script>
 
 							  function initMap() {
-								var myLatLng = {lat: 44.80565688, lng: 20.47632003};
+								var myLatLng = {lat: 44.800377, lng: 20.470014};
 
 								var map = new google.maps.Map(document.getElementById('map'), {
 								  zoom: 15,
@@ -254,7 +262,7 @@
 							<hr>
 							
 							<div id="rezId">
-							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
+							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Book a ticket</button>
 							</div>
 							<hr>
 						</div>

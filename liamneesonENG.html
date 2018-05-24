@@ -1,0 +1,228 @@
+<html>
+	<head>
+		<title>Festival - Liam Neeson</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/glumci.css">
+		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/lightbox-plus-jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script language="javascript">
+		var brojac = 0;
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/aDshY43Ol2U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/7uDuFh-nC-c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/jiHDJ19A3dk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/DfBccnAcuwg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		function prethodni() {
+			brojac = (brojac==0)?3:(brojac-1);
+			popuniDiv();
+		}
+		function sledeci() {
+			brojac = (brojac+1)%4;
+			popuniDiv();
+		}
+		function popuniDiv() {
+			document.getElementById('popuni').innerHTML = niz[brojac];
+		}
+		</script>
+		
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="indexENG.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center nav-ul">
+				<li class="nav-item">
+					<a class="nav-link" href="indexENG.html">Home <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="ofestivaluENG.html">About</a>
+					  <a class="dropdown-item" href="ziriENG.html">Jury</a>
+					  <a class="dropdown-item" href="nagradeENG.html">Awards</a>
+					  <a class="dropdown-item" href="sponzoriENG.html">Sponsors</a>
+					  <a class="dropdown-item" href="kontaktENG.html">Contact</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="filmoviENG.html">Movies</a>
+					  <a class="dropdown-item" href="mestaprojekcijeENG.html">Projection places</a>
+					  <a class="dropdown-item" href="prodajnamestaENG.html">Selling places</a>
+					</div>
+				  </li>
+				  <li class="nav-item active activeLink">
+					<a class="nav-link" href="glumciENG.html">Actors</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="vestiENG.html">News</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="mojifilmoviENG.html">My movies</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="liamneeson.html"><img src="img/srb-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+		<div class="row">
+		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
+					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
+					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
+						<li class="breadcrumb-item"><a href="indexENG.html" class="breadcrumb-link">Home</a></li>
+						<li class="breadcrumb-item"><a href="glumciENG.html" class="breadcrumb-link">Actors</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Liam Neeson</li>
+					  </ol>
+					</nav>
+				</div>
+				</div>
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2>Liam Neeson</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<img class="img img-responsive" style="width:40%; float:left; margin-right:10px;" src="img/liamneeson-opis.jpg">
+							<h3>Basic</h3>
+							<p>
+Liam Nison (artistic name Liam Neeson, right William John Neeson) is a British actor. He was born on June 7, 1952 in Balimena (Ballymena), a city in Northern Ireland. His mother is Katherine Brown, and Bernard Neeson's father Bernard Nisson
+							</p>
+							<h3>Childhood and education</h3>
+							<p>
+							He was handling boxing from the ninth to the seventeenth year. At the age of fifteen, his nose broke, but he continued to box. He worked as a forklift truck for the beer factory Ginis (Guinness), as a truck driver and an assistant architect. He wanted to be a teacher and attended St. John's. Mary's Teaching College, Newcastle (Newcastle). He briefly studied physics and computer science at Queen's University of Belfast. But he discovered that the act is his way. He was admitted to the Bristol Old Vic Drama School in England, but graduated from Dublin's Gaiety School of Drama, as he wanted to be active at the Dublin Shakespeare Theater.
+							</p>
+							<h3>Career</h3>
+							<p>
+							
+He played a lot in the theater. In 1976 he joined Belfast Lyric Players' Theater, and two years later he moved to Dublin Abbey Theater. He was spotted by John Boorman and offered him the first remarkable role in the movie - Excalibur (1981). In 1993, she performed for the first time on Broadway in the play Annae Christie. In the 1990s he was active at the Royal National Theater in London. Nison's filmography is impressive. The most important films in which he acted include: Schindler's list (1993), Les Misérables (1998), Star Wars: Episode I - The Phantom Menace (1999), Gangs of New York (2002), Love Actually (2003), Batman Begins 2005), The A-Team (2010), The Dark Knight Rises (2012), Clash of the Titans (2010) and the sequel to Wrath of the Titans (2012), Taken (2008) and Taken 2 (2016).
+							</p>
+							<h3>Private life</h3>
+							<p>
+He was married to Natasha Richardson on July 3, 1995. Due to the wedding with this actor, he gave up the role of secret agent James Bond. The couple lived in harmony until her death on March 18, 2009, when she succumbed to injuries after a ski accident in Canada. They have two sons from that marriage, Micheal Richard Antonio Neeson, born on June 22, 1995, and Daniel Jack Neeson, born on August 27, 1996. </p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							<h2>Trailer</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="popuni" width="100%" height="50%">
+								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/aDshY43Ol2U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<br>
+							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
+							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						<hr>
+						<h2>Gallery</h2>
+						<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<center><a class="example-image-link" href="img/ln1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/ln2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/ln3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/ln4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/ln4.jpg" alt="image-1" /></a></center>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					Prostor za banere
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<div class="footer-copyright py-3 text-center">
+        <i>© 2018 Copyright: Jovanovic Tijana, Simovic Aleksa, Odsek za softversko inženjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu
+		</i>
+		</div>
+		</footer>
+	
+	
+	</body>
+</html>

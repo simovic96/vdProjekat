@@ -1,0 +1,230 @@
+<html>
+	<head>
+		<title>Festival - Julia Roberts</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/glumci.css">
+		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/lightbox-plus-jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script language="javascript">
+		var brojac = 0;
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/BdmOjfGTUzQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/N3b0PFCrayE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/u2soKNPRALc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/4RI0QvaGoiI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		function prethodni() {
+			brojac = (brojac==0)?3:(brojac-1);
+			popuniDiv();
+		}
+		function sledeci() {
+			brojac = (brojac+1)%4;
+			popuniDiv();
+		}
+		function popuniDiv() {
+			document.getElementById('popuni').innerHTML = niz[brojac];
+		}
+		</script>
+		
+	</head>
+	<body>
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="indexENG.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center nav-ul">
+				<li class="nav-item">
+					<a class="nav-link" href="indexENG.html">Home <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="ofestivaluENG.html">About</a>
+					  <a class="dropdown-item" href="ziriENG.html">Jury</a>
+					  <a class="dropdown-item" href="nagradeENG.html">Awards</a>
+					  <a class="dropdown-item" href="sponzoriENG.html">Sponsors</a>
+					  <a class="dropdown-item" href="kontaktENG.html">Contact</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="filmoviENG.html">Movies</a>
+					  <a class="dropdown-item" href="mestaprojekcijeENG.html">Projection places</a>
+					  <a class="dropdown-item" href="prodajnamestaENG.html">Selling places</a>
+					</div>
+				  </li>
+				  <li class="nav-item active activeLink">
+					<a class="nav-link" href="glumciENG.html">Actors</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="vestiENG.html">News</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="mojifilmoviENG.html">My movies</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="juliaroberts.html"><img src="img/srb-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+		<div class="row">
+		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
+					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
+					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
+						<li class="breadcrumb-item"><a href="indexENG.html" class="breadcrumb-link">Home</a></li>
+						<li class="breadcrumb-item"><a href="glumciENG.html" class="breadcrumb-link">Actors</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Julia Roberts</li>
+					  </ol>
+					</nav>
+				</div>
+				</div>
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2>Julia Roberts</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<img class="img img-responsive" style="width:40%; float:left; margin-right:10px;" src="img/juliaroberts-opis.jpg">
+							<h3>Basic</h3>
+							<p>
+							
+Julia Roberts, 28 October 1967 in Smyrna, Georgia, is an American film actress and former model. She gained world fame in 1990, thanks to the main role in the drama "Pretty Woman", and later in roles in romantic comedies. The most famous of them are the wedding of my best friend, I believe in love and Rude Young. For the role in the drama Erin Brokovic, from 2000, she received the Golden Globe, the BAFTA Award and the Oscar for Best Actress.
+							</p>
+							<h3>Childhood and education</h3>
+							<p>
+							
+Julia was born in Smyrna, not far from Atlanta as Julia Fiona Roberts. Her father was Walter Grede Roberts, and mother Beti Lu. The two of them divorced in 1971, after which Betty marries Michael Moutes. Six years later, Walter died of cancer. Julia has an older brother Erika, who is also an actor. As a child, she wanted to become a veterinarian, but after completing the high school "Campbell" and attending "George's University", she went to New York to act. She went to acting classes, and worked as a model.
+							</p>
+							<h3>Career</h3>
+							<p>
+							
+As early as 1990, Roberts got world fame in the role of a romantic drama, "Pretty Woman", for which she won the Golden Globe for Best Actress and the second Oscar nomination. For this role, Julia won the competition composed by Deril Hannah and Meg Ryan, who was then a big star of love drama. The theme of the film is a romance that is born between a prostitute and a businessman, interpreted by Richard Gir. This film earned more than $ 460,000,000 worldwide, making it the fourth-ranked romantic comedy with the highest earnings, and is considered to be the most financially most successful film in Julie's career. The following year, she played the nurse Hilary in the drama "Die Young", then in the movie "In Bed with an Enemy" and Zvoncica in Spielberg's "Kuki", after which she stopped recording for a while. Magazine Pipl subsequently published the article "What happened to Julia Roberts?", Which caused a lot of controversy in public. In 1993, she received the role of Eni Reid in the film "The Besana in Seattle", but she refused in favor of Meg Ryan.
+							</p>
+							<h3>Private life</h3>
+							<p>
+Julius Roberts's private life has been in the forefront of interest ever since her career began. She was in contact with Liam Nison, Kifera Saderland, Jason Patrick, Matthew Perry, Benjamin Brett and many others. She was even faithful to Saderland, but she broke up on her three days before the wedding and traveled to Ireland with his friend, Jason Patrick. In 1993, she married Lyle Lavet, and in 1995 they divorced. Today she is married to cameraman Daniel Modera. They met on the film "Mexican" and married on June 4, 2002. They have three children. </p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							<h2>Trailer</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div id="popuni" width="100%" height="50%">
+								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/BdmOjfGTUzQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<br>
+							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
+							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+						<hr>
+						<h2>Gallery</h2>
+						<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<center><a class="example-image-link" href="img/jr1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/jr2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/jr3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/jr4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/jr4.jpg" alt="image-1" /></a></center>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					Prostor za banere
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
+		<div class="footer-copyright py-3 text-center">
+        <i>© 2018 Copyright: Jovanovic Tijana, Simovic Aleksa, Odsek za softversko inženjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu
+		</i>
+		</div>
+		</footer>
+	
+	
+	</body>
+</html>

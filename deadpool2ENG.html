@@ -7,13 +7,25 @@
 		<link rel="stylesheet" href="css/index.css">
 		<link rel="stylesheet" href="css/glumci.css">
 		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/mojifilmoviENG.js"></script>
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/lightbox-plus-jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/filmoviENG.js"></script>
 		<script language="javascript">
-			var brojac = 0;
+		var rezervacija=0;
+		function rezervisi() {
+			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Book a ticket</button>';
+			if (rezervacija==0) {
+				unos='<form method="post" action="" id="contactfrm" role="forma" name="forma"><div class="form-group"><label for="ime">First Name</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Write your first name" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Last Name</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Write your last name" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Write your email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telephone</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Write your telephone number" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji(1)">Confirm reservation</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Cancel reservation</button></td></tr><tr><div id="porukaRez"></div></tr></table></form>';
+			}
+			document.getElementById("rezId").innerHTML=unos;
+			rezervacija = (rezervacija+1)%2;
+		}
+		</script>
+		<script language="javascript">
+		var brojac = 0;
 		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/D86RtevtfrA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/20bpjtCbCz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/3aYUjm35wN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xZNBFcwd7zc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 		function prethodni() {
 			brojac = (brojac==0)?3:(brojac-1);
@@ -27,7 +39,21 @@
 			document.getElementById('popuni').innerHTML = niz[brojac];
 		}
 		</script>
-		
+		<script language="javascript">
+		var rezervacija = 0;
+		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/D86RtevtfrA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/20bpjtCbCz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/3aYUjm35wN0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/xZNBFcwd7zc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+		function prethodni() {
+			brojac = (brojac==0)?3:(brojac-1);
+			popuniDiv();
+		}
+		function sledeci() {
+			brojac = (brojac+1)%4;
+			popuniDiv();
+		}
+		function popuniDiv() {
+			document.getElementById('popuni').innerHTML = niz[brojac];
+		}
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -144,9 +170,9 @@
 				<div class="col-sm-12" style="background-color:#f2f2f2!important">
 					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
 					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
-						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Početna</a></li>
+						<li class="breadcrumb-item"><a href="indexENG.html" class="breadcrumb-link">Home</a></li>
 						<li class="breadcrumb-item">Program</li>
-						<li class="breadcrumb-item"><a href="filmovi.html" class="breadcrumb-link">Filmovi</a></li>
+						<li class="breadcrumb-item"><a href="filmoviENG.html" class="breadcrumb-link">Movies</a></li>
 						<li class="breadcrumb-item active" aria-current="page">DeadPool 2</li>
 					  </ol>
 					</nav>
@@ -154,22 +180,24 @@
 			</div>
 					<div class="row">
 						<div class="col-sm-12">
-							<h2>Deadpool 2</h2>
+							<table><tr><td width="50%"><h2>Deadpool 2</h2></td><td width="50%"><center><button type="button" class="btn btn-outline-secondary" onclick="dodaj(1)" align="left">Add to favorites</button></td></tr></table>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12" style="min-height:30%">
 							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/deadpool-poster.jpg">
-							<h3>O filmu</h3>
+							<h3>About movie</h3>
 							<p>
-							Dedpul (енгл. Deadpool) izmišljeni je lik, plaćenik i anti-heroj, koji se pojavljuje u stripovima izdavačke kuće Marvel Komiks. Stvoren od strane crtača Rob Laefeld i pisca Fabian Ničeica, Dedpul se prvi put pojavio u Novi Mutanti (eng. New Mutants) #98 (Feb. 1991).
+							
+Deadpool is a fictional character, a mercenary and anti-hero, appearing in comics of the Marvel Comics publishing house. Created by the sculptor Rob Laefeld and writer Fabian Nichitsch, Dedpul appeared for the first time in New Mutants # 98 (Feb. 1991).
 							</p>
 							<p>
-							Unakaženog tela i mentalno nestabilan plaćenik Dedpul se prvobitno pojavljivao kao zlikovac u broju strip-časopisa Novi Mutanti , i kasnijim izdanjima X-Sila (eng. X-Force). Lik se od tad pojavljivao u nekoliko tekućih serija stip-časopisa, i delio naslove stripa sa drugim likovima kao što su Kejbl (eng.Cable). Takođe poznat kao "Brbljivi plaćenik," Dedpul je poznat po svojoj pričljivoj prirodi i sklonosti da "razbije četvrti zid" , koji je koriščen od strane pisaca radi humorističkog efekta.
+							
+Disappointed body and mentally unstable mercenary Dedpul originally appeared as a villain in the number of the comic book New Mutanti, and subsequent editions of X-Force. Since then, he has appeared in several current series of studios, and shared comics titles with other characters such as Cable. Also known as "Chatterwalker", Dedpul is known for his wild nature and tendency to "break up the fourth wall", which was used by writers for a humorous effect.
 							</p>
 							<p>
-							Dedpul je rangiran 182 na Wizard liste časopisa 200 Najboljih likova strip-časopisa svih vremena,; rangiran 45 na Empajer listi 50 najčuvenih likova strip-časopisa, i postavljen 31 na IGN listi 100 heroja strip-časopisa Glumio ga je Rajan Rejnold 2009 u filmu "X-men Počeci: Vulverin". Stvoren od strane crtača Rob Laefeld i pisca Fabian Ničeica, Dedpul se prvi put pojavio u stranicama "Novi Mutanti" #98 broju objavljen u februaru 1991. Rob Laefeld, obožavalac "Tinejdžerski titani" strip-časopisa, pokazao je svoj novi lik tadašnjem piscu Fabian Ničeica. Kada je video kostim i opazio karakteristike (ubica sa super agilnošču), Ničeica je nazvao Laefelda, govorećimu "da je ovo Dedstrouk (eng. Deathstroke) iz "Tinejdžerskih titana."
+							Dedpul was ranked 182 on the Wizard List of the 200 Best Featured Story Magazine of All Time; ranking 45 on the Empire list of 50 most famous characters of the comic magazine, and posted 31 on the IGN list of 100 heroes of the comic book Glumio by Ryan Reynold 2009 in the film "X-Men Begins: Wolverine." Created by the sculptor Rob Laefeld and writer Fabian Nicheica, Dedpul appeared for the first time in the site "New Mutants" # 98 published in February 1991. Rob Laefeld, admirer of the "Teenage Titans" of the comic magazine, showed his new character to then-writer Fabian Nichitsa. When he saw the costume and noticed the characteristics (the killer with a super agility), Nichieich called Laefeld, saying "this is a Dadstroke from the" Teenage Titans. "
 							</p>
 						</div>
 					</div>
@@ -177,7 +205,7 @@
 						<div class="col-sm-12">
 						
 							<hr>
-							<h2>Trejler</h2>
+							<h2>Trailer</h2>
 							<hr>
 						</div>
 					</div>
@@ -194,7 +222,7 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
-						<h2>Galerija</h2>
+						<h2>Gallery</h2>
 						<hr>
 						</div>
 					</div>
@@ -209,7 +237,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<hr>
-							<h2>Najbliža projekcija</h2>
+							<h2>The closest projection</h2>
 							<hr>
 						</div>
 					</div>
@@ -243,7 +271,7 @@
 							<hr>
 							
 							<div id="rezId">
-							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
+							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Book a ticket</button>
 							</div>
 							<hr>
 						</div>

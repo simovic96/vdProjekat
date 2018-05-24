@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Festival - Vuk sa Vol Strita</title>
+		<title>Festival - DeadPool2</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
@@ -11,32 +11,8 @@
 		<script src="js/lightbox-plus-jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script language="javascript">
-		var brojac = 0;
-		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/iszwuX1AK6A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/pabEtIERlic" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/idAVRvQeYAE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/x-51mt2tIVw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-		function prethodni() {
-			brojac = (brojac==0)?3:(brojac-1);
-			popuniDiv();
-		}
-		function sledeci() {
-			brojac = (brojac+1)%4;
-			popuniDiv();
-		}
-		function popuniDiv() {
-			document.getElementById('popuni').innerHTML = niz[brojac];
-		}
-		</script>
-		<script>
-		var rezervacija = 0;
-		function rezervisi() {
-			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>';
-			if (rezervacija==0) {
-				unos='<form method="post" action="" id="contactfrm" role="forma"><div class="form-group"><label for="ime">Ime</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Prezime</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telefon</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Unesite telefon" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji()">Potvrdi rezervaciju</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Otkaži rezervaciju</button></td></tr></table></form>';
-			}
-			document.getElementById("rezId").innerHTML=unos;
-			rezervacija = (rezervacija+1)%2;
-		}
-		</script>
+		<script src="js/filmovi.js"></script>
+		
 	</head>
 	<body>
 		<div class="container">
@@ -50,7 +26,7 @@
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
 				<li class="nav-item">
-					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,7 +57,7 @@
 					<a class="nav-link" href="vesti.html">Vesti</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="mojifilmovi.html.html">Moji filmovi</a>
+					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
@@ -89,7 +65,7 @@
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
 				&nbsp;&nbsp;&nbsp;
-				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href="deadpool2ENG.html"><img src="img/eng-logo.png"></a> </li>
 			</ul>
 			</div>
 			</div>
@@ -147,38 +123,38 @@
 		</nav>
 		
 		<div class="container-fluid">
-		<div class="row">
-		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+				<div class="row">
+				<div class="col-sm-12" style="background-color:#f2f2f2!important">
 					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
 					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
-						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Pocetna</a></li>
+						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Početna</a></li>
 						<li class="breadcrumb-item">Program</li>
 						<li class="breadcrumb-item"><a href="filmovi.html" class="breadcrumb-link">Filmovi</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Vuk sa Vol Strita</li>
+						<li class="breadcrumb-item active" aria-current="page">DeadPool 2</li>
 					  </ol>
 					</nav>
 				</div>
-				</div>
-			<div class="row">
-				<div class="offset-sm-1 col-sm-9">
+			</div>
 					<div class="row">
 						<div class="col-sm-12">
-							<h2>Vuk sa Vol Strita</h2>
+							<h2>Deadpool 2</h2>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12" style="min-height:30%">
-							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/vuk-sa-vol-strita-poster.jpg">
+							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/deadpool-poster.jpg">
 							<h3>O filmu</h3>
 							<p>
-							Vuk sa Vol Strita (engl. The Wolf of Wall Street) američka je crna komedija u režiji Martina Skorsezea snimljena po istoimenoj knjizi memoara Džordana Belforta. Scenario je napisao Terens Vinter, a Leonardo Dikaprio tumači ulogu Belforta, njujorškog brokera čija je kompanija umešana u mnoge ilegalne akcije na Vol stritu tokom devedesetih godina prošlog veka.
+							Dedpul (енгл. Deadpool) izmišljeni je lik, plaćenik i anti-heroj, koji se pojavljuje u stripovima izdavačke kuće Marvel Komiks. Stvoren od strane crtača Rob Laefeld i pisca Fabian Ničeica, Dedpul se prvi put pojavio u Novi Mutanti (eng. New Mutants) #98 (Feb. 1991).
 							</p>
 							<p>
-							U filmu takođe nastupaju Džona Hil, Margo Robi, Metju Makonahej, Kajl Čendler, Rob Rajner, Džon Berntal, Džon Favro i Žan Dižarden. Vuk sa Vol Strita je peti film u kome je Skorseze Dikapriju poverio jednu od glavnih uloga, i ujedno njegova druga saradnja sa Terensom Vinterom, nakon serije Carstvo poroka. Film je ostvario veliku zaradu na bioskopskim blagajnama i naišao na pozitivne kritike, ali takođe je izazvao dosta polemika zbog moralne dvosmislenosti, seksualnog sadržaja, prisustva narkotika i vulgarnosti. Bio je je nominovan za brojne nagrade, uključujući i pet Oskara (najbolji film, najbolji režiser, najbolji adaptirani scenario, najbolji glumac i najbolji sporedni glumac).
+							Unakaženog tela i mentalno nestabilan plaćenik Dedpul se prvobitno pojavljivao kao zlikovac u broju strip-časopisa Novi Mutanti , i kasnijim izdanjima X-Sila (eng. X-Force). Lik se od tad pojavljivao u nekoliko tekućih serija stip-časopisa, i delio naslove stripa sa drugim likovima kao što su Kejbl (eng.Cable). Takođe poznat kao "Brbljivi plaćenik," Dedpul je poznat po svojoj pričljivoj prirodi i sklonosti da "razbije četvrti zid" , koji je koriščen od strane pisaca radi humorističkog efekta.
 							</p>
 							<p>
-							Trenutno drži rekord kao igrani film u kome ja reč "fuck" upotrebljena najviše puta. Osim toga, uveren je da film neće "inspirisati" nove "vukove", i bitno mu je da se film gleda kao priča upozorenja, a smatra da ako kod nekoga ipak probudi želju za takvim životom, onda je to osoba kojoj "fali daska u glavi". Pirs Morgan suočio ga je i sa činjenicom da je naštetio mnogim ljudima, na šta je Belfort rekao da radi najviše što može da ispravi ono što je napravio i da nema nameru da živi život u sramoti.
+							Dedpul je rangiran 182 na Wizard liste časopisa 200 Najboljih likova strip-časopisa svih vremena,; rangiran 45 na Empajer listi 50 najčuvenih likova strip-časopisa, i postavljen 31 na IGN listi 100 heroja strip-časopisa Glumio ga je Rajan Rejnold 2009 u filmu "X-men Počeci: Vulverin". Stvoren od strane crtača Rob Laefeld i pisca Fabian Ničeica, Dedpul se prvi put pojavio u stranicama "Novi Mutanti" #98 broju objavljen u februaru 1991. Rob Laefeld, obožavalac "Tinejdžerski titani" strip-časopisa, pokazao je svoj novi lik tadašnjem piscu Fabian Ničeica. Kada je video kostim i opazio karakteristike (ubica sa super agilnošču), Ničeica je nazvao Laefelda, govorećimu "da je ovo Dedstrouk (eng. Deathstroke) iz "Tinejdžerskih titana."
 							</p>
 						</div>
 					</div>
@@ -193,7 +169,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div id="popuni" width="100%" height="50%">
-								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/iszwuX1AK6A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/D86RtevtfrA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
 							<br>
 							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
@@ -209,10 +185,10 @@
 					</div>
 					<div class="row" height="25%">
 						<div class="col-sm-12">
-							<center><a class="example-image-link" href="img/wws1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/wws1.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/wws2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/wws2.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/wws3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/wws3.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/wws4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/wws4.jpg" alt="image-1" /></a></center>
+							<center><a class="example-image-link" href="img/dp1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp1.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/dp2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp2.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/dp3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp3.jpg" alt="image-1" /></a>
+							<a class="example-image-link" href="img/dp4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/dp4.jpg" alt="image-1" /></a></center>
 						</div>
 					</div>
 					<div class="row">
@@ -229,7 +205,7 @@
 							<script>
 
 							  function initMap() {
-								var myLatLng = {lat: 44.809025, lng: 20.4325622};
+								var myLatLng = {lat: 44.773437, lng: 20.473611};
 
 								var map = new google.maps.Map(document.getElementById('map'), {
 								  zoom: 15,
@@ -267,7 +243,7 @@
 		
 		<footer class="page-footer font-small white pt-0" style="margin-top:5px; border-top:4px solid black;border-bottom:4px solid black; background-color:white;">
 		<div class="footer-copyright py-3 text-center">
-        <i>© 2018 Copyright: Jovanovic Tijana, Simovic Aleksa, Odsek za softversko inženjerstvo Elektrotehnickog fakulteta Univerziteta u Beogradu
+        <i>© 2018 Copyright: Jovanović Tijana, Simović Aleksa, Odsek za softversko inženjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
 		</i>
 		</div>
 		</footer>

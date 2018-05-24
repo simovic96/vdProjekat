@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Festival - Izdaja</title>
+		<title>Festival - Red Sparrow</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
@@ -11,7 +11,7 @@
 		<script src="js/lightbox-plus-jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/filmovi.js"></script>
+		<script src="js/filmoviENG.js"></script>
 		<script language="javascript">
 		var brojac = 0;
 		var niz = new Array('<iframe width="100%" height="50%" src="https://www.youtube.com/embed/PmUL6wMpMWw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/rUy7JEBu0F4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/LaixeZoLoFk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>','<iframe width="100%" height="50%" src="https://www.youtube.com/embed/jOTLVy7kgXA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
@@ -30,60 +30,60 @@
 		<script language="javascript">
 		var rezervacija=0;
 		function rezervisi() {
-			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezervisi kartu</button>';
+			var unos='<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Book a ticket</button>';
 			if (rezervacija==0) {
-				unos='<form method="post" action="" id="contactfrm" role="forma" name="forma"><div class="form-group"><label for="ime">Ime</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Unesite ime" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Prezime</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Unesite prezime" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Unesite email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telefon</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Unesite telefon" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji(0)">Potvrdi rezervaciju</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Otkaži rezervaciju</button></td></tr><tr><div id="porukaRez"></div></tr></table></form>';
+				unos='<form method="post" action="" id="contactfrm" role="forma" name="forma"><div class="form-group"><label for="ime">First Name</label><input type="text" class="form-control" name="ime" id="ime" placeholder="Write your first name" title="Unesite svoje ime" required></div><div class="form-group"><label for="prezime">Last Name</label><input type="text" class="form-control" name="prezime" id="prezime" placeholder="Write your last name" title="Unesite svoje prezime" required></div><div class="form-group"><label for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Write your email" title="Unesite svoj email" required></div><div class="form-group"><label for="telefon">Telephone</label><input type="text" class="form-control" name="telefon" id="telefon" placeholder="Write your telephone number" title="Unesite svoj telefon" required></div><table><tr><td width="50%"><button name="dugme" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="pritisnuoPosalji(1)">Confirm reservation</button></td><td width="50%">&nbsp;&nbsp;<button name="dugme2" type="button" class="btn btn-lg btn-outline-secondary" id="posalji" onclick="rezervisi()">Cancel reservation</button></td></tr><tr><div id="porukaRez"></div></tr></table></form>';
 			}
 			document.getElementById("rezId").innerHTML=unos;
 			rezervacija = (rezervacija+1)%2;
 		}
 		</script>
-		<script src="js/mojifilmovi.js"></script>
+		<script src="js/mojifilmoviENG.js"></script>
 	</head>
 	<body>
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
 		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
-			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<a href="indexENG.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
 			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
 				<li class="nav-item">
-					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="indexENG.html">Home <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Festival
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
-					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
-					  <a class="dropdown-item" href="ziri.html">Žiri</a>
-					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
-					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
-					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					  <a class="dropdown-item" href="ofestivaluENG.html">About</a>
+					  <a class="dropdown-item" href="ziriENG.html">Jury</a>
+					  <a class="dropdown-item" href="nagradeENG.html">Awards</a>
+					  <a class="dropdown-item" href="sponzoriENG.html">Sponsors</a>
+					  <a class="dropdown-item" href="kontaktENG.html">Contact</a>
 					</div>
 				  </li>
-				  <li class="nav-item dropdown  active activeLink">
+				  <li class="nav-item dropdown active activeLink">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Program
 					</a>
 					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
-					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
-					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
-					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					  <a class="dropdown-item" href="filmoviENG.html">Movies</a>
+					  <a class="dropdown-item" href="mestaprojekcijeENG.html">Projection places</a>
+					  <a class="dropdown-item" href="prodajnamestaENG.html">Selling places</a>
 					</div>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="glumci.html">Glumci</a>
+					<a class="nav-link" href="glumciENG.html">Actors</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="vesti.html">Vesti</a>
+					<a class="nav-link" href="vestiENG.html">News</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+					<a class="nav-link" href="mojifilmoviENG.html">My movies</a>
 				  </li>
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
@@ -91,7 +91,7 @@
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
 				&nbsp;&nbsp;&nbsp;
-				<li class="nav-item"><a class="nav-link" href="izdajaENG.html"><img src="img/eng-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href="izdaja.html"><img src="img/srb-logo.png"></a> </li>
 			</ul>
 			</div>
 			</div>
@@ -147,16 +147,15 @@
 			</div>
 			</div>
 		</nav>
-		
 		<div class="container-fluid">
 		<div class="row">
 		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
 					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
 					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
-						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Pocetna</a></li>
+						<li class="breadcrumb-item"><a href="indexENG.html" class="breadcrumb-link">Home</a></li>
 						<li class="breadcrumb-item">Program</li>
-						<li class="breadcrumb-item"><a href="filmovi.html" class="breadcrumb-link">Filmovi</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Izdaja</li>
+						<li class="breadcrumb-item"><a href="filmoviENG.html" class="breadcrumb-link">Movies</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Red Sparrow</li>
 					  </ol>
 					</nav>
 				</div>
@@ -165,22 +164,25 @@
 				<div class="offset-sm-1 col-sm-9">
 					<div class="row">
 						<div class="col-sm-12">
-							<table><tr><td width="50%"><h2>Izdaja</h2></td><td width="50%"><center><button type="button" class="btn btn-outline-secondary" onclick="dodaj(0)" align="left">Dodaj u omiljene</button></td></tr></table>
+							<table><tr><td width="50%"><h2>Red Sparrow</h2></td><td width="50%"><center><button type="button" class="btn btn-outline-secondary" onclick="dodaj(0)" align="left">Add to favorites</button></td></tr></table>
 							<hr>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12" style="min-height:30%">
 							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/redsparrow-poster.jpg">
-							<h3>O filmu</h3>
+							<h3>About movie</h3>
 							<p>
-							Konačno je objavljen zvanični trailer za špijunski triler "Red Sparrow" u kojem će ponovo zasijati jedna od najplaćenijih glumica na svetu Jennifer Lawrence. Filmsko ostvarenje austrijskog reditelja Francisa Lawrencea donosi priču koja je utemeljena na romanu člana CIA-e Jasona Matthewsa koji je iz ove agencije izašao 2013. godine.
+							
+Finally, an official trailer for the spy thriller "Red Sparrow" was released, in which one of the most paid actresses in the world, Jennifer Lawrence, will sway again. The film's production by Austrian director Francis Lawrence brings a story based on the novel of CIA member Jason Matthews who came out of this agency in 2013.
 							</p>
 							<p>
-							Lawrence u filmu glumi Ruskinju Dominiku Egorovu koja je većinu života provela vežbajući balet. Međutim, nakon teške povrede, prisiljena je da nađe novi posao. Ona odlazi u tajnu školu ruske obaveštajne službe "Sparrow School" gde će je obučiti kako da koristi svoje telo kao oružje. Međutim, već tokom prve misije Dominika će napraviti grešku. Reditelj Lawrence, koji inače nije ni u kakvom srodstvu s Jennifer, proslavio je američku glumicu ulogom u filmovima "The Hunger Games".
+							
+Lawrence in the movie starring Russian woman Dominik Egore, who spent most of her life practicing a ballet. However, after a serious injury, she is forced to find a new job. She goes to the secret school of the Russian intelligence service "Sparrow School" where she will train her to use her body as a weapon. However, during the first mission, Dominica will make a mistake. Director Lawrence, who is not in any way related to Jennifer, celebrated the American actress in the role of "The Hunger Games".
 							</p>
 							<p>
-							Pored nje, u filmu glume još i Mary-Louise Parker, Joel Edgerton, Matthias Schoenaerts, Jeremy Irons, Ciaran Hinds i mnogi drugi. Film će premijerno biti prikazan u svetskim bioskopima 2. marta ove godine. Prema mišljenju filmskih kritičara, priča u kojoj se Lawrence iz balerine pretvara u ubicu, mogla bi doneti glumici veliku zaradu.
+							
+In addition to her, the film starring Mary-Louise Parker, Joel Edgerton, Matthias Schoenaerts, Jeremy Irons, Ciaran Hinds and many others. The film will be premiered on world cinemas on March 2 this year. According to film critics, the story of turning Lawrence from a ballerina into a killer could make the actress a huge profit.
 							</p>
 						</div>
 					</div>
@@ -188,7 +190,7 @@
 						<div class="col-sm-12">
 						
 							<hr>
-							<h2>Trejler</h2>
+							<h2>Trailer</h2>
 							<hr>
 						</div>
 					</div>
@@ -205,7 +207,7 @@
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
-						<h2>Galerija</h2>
+						<h2>Gallery</h2>
 						<hr>
 						</div>
 					</div>
@@ -220,7 +222,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<hr>
-							<h2>Najbliža projekcija</h2>
+							<h2>The closest projection</h2>
 							<hr>
 						</div>
 					</div>
@@ -254,7 +256,7 @@
 							<hr>
 							
 							<div id="rezId">
-							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
+							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Book a ticket</button>
 							</div>
 							<hr>
 						</div>

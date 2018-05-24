@@ -10,7 +10,7 @@ function dodaj(broj) {
 			localStorage.setItem(broj,trenutno+1);
 		}
 	}
-	alert("Uspešno dodat");
+	alert("Successfully added");
 }
 function izlistaj() {
 	var i;

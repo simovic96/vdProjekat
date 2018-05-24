@@ -1,0 +1,21 @@
+/* -------------------- Page Styles (not required) */
+
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+select {
+	background-color:lightgrey;
+	border:4px solid white;
+	font-size:18px;
+	 -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   height:40px;
+   width:200px;
+	
+}
+
+  select>option:hover
+    {
+        color: #000;
+        cursor: pointer;
+    }

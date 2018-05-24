@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Festival - Izdaja</title>
+		<title>Festival - Tomb Raider</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/dropdown.css">
 		<link rel="stylesheet" href="css/index.css">
@@ -11,11 +11,9 @@
 		<script src="js/lightbox-plus-jquery.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/filmovi.js"></script>
-		
 		<script src="js/mojifilmovi.js"></script>
 	</head>
-	<body>
+	<body onload="izlistaj()">
 		<div class="container">
 		<div class="row">
 		<div class="col-sm-12">
@@ -27,7 +25,7 @@
 			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
 			<ul class="navbar-nav mx-auto text-center nav-ul">
 				<li class="nav-item">
-					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="index.html">Početna <span class="sr-only">(current)</span></a>
 				  </li>
 				  <li class="nav-item dropdown">
 					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,7 +39,7 @@
 					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
 					</div>
 				  </li>
-				  <li class="nav-item dropdown  active activeLink">
+				  <li class="nav-item dropdown active activeLink">
 					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					  Program
 					</a>
@@ -66,7 +64,7 @@
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
 				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
 				&nbsp;&nbsp;&nbsp;
-				<li class="nav-item"><a class="nav-link" href="izdajaENG.html"><img src="img/eng-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href="tomraiderENG.html"><img src="img/eng-logo.png"></a> </li>
 			</ul>
 			</div>
 			</div>
@@ -124,121 +122,12 @@
 		</nav>
 		
 		<div class="container-fluid">
-		<div class="row">
-		<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
-					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
-					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
-						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Pocetna</a></li>
-						<li class="breadcrumb-item">Program</li>
-						<li class="breadcrumb-item"><a href="filmovi.html" class="breadcrumb-link">Filmovi</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Izdaja</li>
-					  </ol>
-					</nav>
-				</div>
-				</div>
 			<div class="row">
-				<div class="offset-sm-1 col-sm-9">
-					<div class="row">
-						<div class="col-sm-12">
-							<table><tr><td width="50%"><h2>Izdaja</h2></td><td width="50%"><center><button type="button" class="btn btn-outline-secondary" onclick="dodaj(0)" align="left">Dodaj u omiljene</button></td></tr></table>
-							<hr>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12" style="min-height:30%">
-							<img class="img img-responsive" style="width:20%; float:left; margin-right:10px;" src="img/redsparrow-poster.jpg">
-							<h3>O filmu</h3>
-							<p>
-							Konačno je objavljen zvanični trailer za špijunski triler "Red Sparrow" u kojem će ponovo zasijati jedna od najplaćenijih glumica na svetu Jennifer Lawrence. Filmsko ostvarenje austrijskog reditelja Francisa Lawrencea donosi priču koja je utemeljena na romanu člana CIA-e Jasona Matthewsa koji je iz ove agencije izašao 2013. godine.
-							</p>
-							<p>
-							Lawrence u filmu glumi Ruskinju Dominiku Egorovu koja je većinu života provela vežbajući balet. Međutim, nakon teške povrede, prisiljena je da nađe novi posao. Ona odlazi u tajnu školu ruske obaveštajne službe "Sparrow School" gde će je obučiti kako da koristi svoje telo kao oružje. Međutim, već tokom prve misije Dominika će napraviti grešku. Reditelj Lawrence, koji inače nije ni u kakvom srodstvu s Jennifer, proslavio je američku glumicu ulogom u filmovima "The Hunger Games".
-							</p>
-							<p>
-							Pored nje, u filmu glume još i Mary-Louise Parker, Joel Edgerton, Matthias Schoenaerts, Jeremy Irons, Ciaran Hinds i mnogi drugi. Film će premijerno biti prikazan u svetskim bioskopima 2. marta ove godine. Prema mišljenju filmskih kritičara, priča u kojoj se Lawrence iz balerine pretvara u ubicu, mogla bi doneti glumici veliku zaradu.
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-						
-							<hr>
-							<h2>Trejler</h2>
-							<hr>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div id="popuni" width="100%" height="50%">
-								<iframe width="100%" height="50%" src="https://www.youtube.com/embed/PmUL6wMpMWw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-							</div>
-							<br>
-							<center><button type="button" class="btn btn-outline-secondary" onclick="prethodni()">&laquo;</button>
-							<button type="button" class="btn btn-outline-secondary" onclick="sledeci()">&raquo;</button></center>
-							<hr>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-						<h2>Galerija</h2>
-						<hr>
-						</div>
-					</div>
-					<div class="row" height="25%">
-						<div class="col-sm-12">
-							<center><a class="example-image-link" href="img/rs1.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs1.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/rs2.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs2.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/rs3.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs3.jpg" alt="image-1" /></a>
-							<a class="example-image-link" href="img/rs4.jpg" data-lightbox="lb1"><img class="imagelb1" src="img/rs4.jpg" alt="image-1" /></a></center>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<hr>
-							<h2>Najbliža projekcija</h2>
-							<hr>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div id="map"style="width:100%;height:400px;"></div>
-							<div id="map"></div>
-							<script>
-
-							  function initMap() {
-								var myLatLng = {lat: 44.80565688, lng: 20.47632003};
-
-								var map = new google.maps.Map(document.getElementById('map'), {
-								  zoom: 15,
-								  center: myLatLng
-								});
-								var marker = new google.maps.Marker({
-								  position: myLatLng,
-								  map: map,
-								  title: 'Hello World!'
-								});
-							  }
-							</script>
-							<script async defer
-							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGhsVpjnpP_alimoKSREfuSE8tJRA1v3U&callback=initMap">
-							</script>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<hr>
-							
-							<div id="rezId">
-							<button type="button" class="btn btn-lg btn-outline-secondary"onclick="rezervisi()">Rezerviši kartu</button>
-							</div>
-							<hr>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					Prostor za banere
+				<div class="col-sm-12">
+					<h1>Lista mojih filmova</h1>
 				</div>
 			</div>
+			<div id="popuniMojimFilmovima"></div>
 		</div>
 		
 		
@@ -248,7 +137,6 @@
 		</i>
 		</div>
 		</footer>
-	
 	
 	</body>
 </html>

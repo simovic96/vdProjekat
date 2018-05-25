@@ -28,4 +28,5 @@ function pritisnuoPosalji(broj) {
 		} else podaci=1;
 		localStorage.setItem(broj+"1", podaci);
 	}
+	document.getElementById("porukaRez").innerHTML = '<div class="alert alert-success">Uspešno rezervisano!</div>';
 }

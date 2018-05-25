@@ -1,5 +1,6 @@
-function potvrdiRez(broj) {
+/*function potvrdiRez(broj) {
 	var podaci=0;
+	var name;
 	if (document.forma.ime.value=="") {
 		document.getElementById("porukaRez").innerHTML = '<div class="alert alert-warning">Unesite ime!</div>';
 		return;
@@ -8,11 +9,11 @@ function potvrdiRez(broj) {
 		document.getElementById("porukaRez").innerHTML = '<div class="alert alert-warning">Unesite prezime!</div>';
 		return;
 	}
-	if ('localStorage' in window && window.localStorage !== null) {
-		podaci=localStorage.getItem(i+"1");
-		if (podaci!=null) {
-			podaci = podaci+1;
-		} else podaci=0;
-		localStorage.setItem(i+"1", podaci);
-	}
-}
+	name=5+i;
+	podaci=localStorage.getItem(name);
+	if (podaci!=null) {
+		podaci = podaci+1;
+	} else podaci=1;
+	localStorage.setItem(name, podaci);
+	document.getElementById("porukaRez").innerHTML = '<div class="alert alert-warning">Unesite prezime!</div>';
+}*/

@@ -9,6 +9,7 @@
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/mojifilmovi.js"></script>
+		<script src="js/sortiranje.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -133,12 +134,13 @@
 			<div class="row">
 				<div class="col-sm-12" style="margin-top:20px; margin-bottom:20px;">	
 					<center>
-					  <select id="sortiranje" style="margin-right:10px;">
+					  <form name="forma"><select id="sortiranje" style="margin-right:10px;" name="opcijeSortiranja">
 						<option value="0">Ime filma</option>
 						<option value="1">Mesto projekcije</option>
 						<option value="2">Popularnost</option>
 					  </select>
-					  <button class="btn btn-outline-secondary">Sortiraj</button>
+					  <button class="btn btn-outline-secondary" onclick="sortFilmovi();return false;">Sortiraj</button>
+					  </form>
 					  </div>
 				</center>
 			</div>

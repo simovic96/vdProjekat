@@ -1,0 +1,215 @@
+<html>
+	<head>
+		<title>Festival - Mesta projekcije</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dropdown.css">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/glumci.css">
+		<link rel="stylesheet" href="css/lightbox.min.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/lightbox-plus-jquery.min.js"></script>
+		
+		<script src="js/mojifilmovi.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/filmovi.js"></script>
+		<script>
+      var map;
+      function initialize() {
+        // Get all map canvas with ".maps" and store them to a variable.
+        var maps = document.getElementsByClassName("maps");
+
+        var ids, gps, mapId = '';
+
+        // Loop: Explore all elements with ".maps" and create a new Google Map object for them
+        for(var i=0; i<maps.length; i++) {
+
+          // Get ID of single div
+          mapId = document.getElementById(maps[i].id);
+
+          // Get LatLng stored in data attribute. 
+          // !!! Make sure there is no space in data-attribute !!!
+          // !!! and the values are separated with comma !!!
+          gps = mapId.getAttribute('data-gps');
+
+          // Convert LatLng to an array
+          gps = gps.split(",");
+
+          // Create new Google Map object for single canvas 
+          map = new google.maps.Map(mapId, {
+            zoom: 15,
+            // Use our LatLng array bellow
+            center: new google.maps.LatLng(parseFloat(gps[0]), parseFloat(gps[1])),
+            mapTypeId: 'roadmap',
+            mapTypeControl: true,
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_TOP
+            }
+          });
+
+          // Create new Google Marker object for new map
+          var marker = new google.maps.Marker({
+            // Use our LatLng array bellow
+            position: new google.maps.LatLng(parseFloat(gps[0]), parseFloat(gps[1])),
+            map: map
+          });
+        }
+      }
+  </script>
+	</head>
+	<body onload="initialize()">
+		<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+		<nav class="fixednav navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 4px solid black;border-bottom: 4px solid black;width:100%">
+			<a href="index.html" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center nav-ul">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="ofestivalu.html">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="nagrade.html">Nagrade</a>
+					  <a class="dropdown-item" href="sponzori.html">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown active activeLink">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="filmovi.html">Filmovi</a>
+					  <a class="dropdown-item" href="mestaprojekcije.html">Mesta projekcije</a>
+					  <a class="dropdown-item" href="prodajnamesta.html">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="glumci.html">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="vesti.html">Vesti</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="mojifilmovi.html">Moji filmovi</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="mestaprojekcijeENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		</div>
+		</div>
+		<nav class="navbar navbar-default navbar-light navbar-expand-md bg-white justify-content-center" style="border-top: 2px solid black;border-bottom: 2px solid black;">
+			<a href="/" class="navbar-brand mr-0"><img src="img/logo.png"></a> 
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+			<ul class="navbar-nav mx-auto text-center">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Pocetna <span class="sr-only">(current)</span></a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Festival
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown1">
+					  <a class="dropdown-item" href="#">O Festivalu</a>
+					  <a class="dropdown-item" href="ziri.html">Žiri</a>
+					  <a class="dropdown-item" href="#">Nagrade</a>
+					  <a class="dropdown-item" href="#">Sponzori</a>
+					  <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+					</div>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					  Program
+					</a>
+					<div class="dropdown-menu" style="background-color:#f2f2f2;" aria-labelledby="navbarDropdown">
+					  <a class="dropdown-item" href="#">Filmovi</a>
+					  <a class="dropdown-item" href="#">Mesta projekcije</a>
+					  <a class="dropdown-item" href="#">Prodajna mesta</a>
+					</div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Glumci</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">Vesti</a>
+				  </li>
+			</ul>
+			<ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/yt-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/ig-logo.png"></a> </li>
+				<li class="nav-item"><a class="nav-link" href=""><img src="img/fb-logo.png"></a> </li>
+				&nbsp;&nbsp;&nbsp;
+				<li class="nav-item"><a class="nav-link" href="indexENG.html"><img src="img/eng-logo.png"></a> </li>
+			</ul>
+			</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="offset-sm-1 col-sm-10" style="background-color:#f2f2f2!important">
+					<nav aria-label="breadcrumb" style="align:center" style="background-color:#f2f2f2!important">
+					  <ol class="breadcrumb bfont" style="background-color:#f2f2f2!important">
+						<li class="breadcrumb-item"><a href="index.html" class="breadcrumb-link">Početna</a></li>
+						<li class="breadcrumb-item">Program</li>
+						<li class="breadcrumb-item active" aria-current="page">Mesta projekcije</li>
+					  </ol>
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<div class="offset-sm-1 col-sm-9">
+					<div class="row">
+						<div class="col-sm-3" style="margin-bottom:15px;">
+							<h2>Mesta projekcije</h2>
+							<hr>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<h3>Sava centar</h3>
+							<div style="margin-bottom:7px">
+							<b>Adresa:</b> Milentija Popovića 9, 11000 Beograd<br>
+								<b>Kontakt telefon:</b>011/220-60-00
+								</div>
+							<div id="map123" class="map" data-gps="46.1461154,17.1580882" style="width:90%;height:400px;"></div>
+							
+						</div>
+						<div class="col-sm-6">
+							<h3>Štark arena</h3>
+							<div style="margin-bottom:7px">
+							<b>Adresa:</b> Bulevar Arsenija Čarnojevića, 11000 Beograd<br>
+								<b>Kontakt telefon:</b>011/220-22-22
+								</div>
+							<div id="map456" class="map" data-gps="45.1461154,13.1080882" style="width:90%;height:400px;"></div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					Prostor za banere
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

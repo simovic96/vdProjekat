@@ -9,10 +9,21 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script language="javascript">
 		function pritisnuoPosalji(){
-			document.getElementById('rezultat').innerHTML='<div class="alert alert-success"><b>Hvala na komentaru!</b></div>';
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if (document.forma.ime.value=="") {
+				document.getElementById('rezultat').innerHTML='<div class="alert alert-warning"><b>Insert name!</b></div>';
+				return;
+			}
+			if (document.forma.email.value=="" || re.test(document.forma.email.value)==false) {
+				document.getElementById('rezultat').innerHTML='<div class="alert alert-warning"><b>Incorrect email!</b></div>';
+				return;
+			}
+			if (document.forma.komentar.value=="") {
+				document.getElementById('rezultat').innerHTML='<div class="alert alert-warning"><b>Insert comment!</b></div>';
+				return;
+			}
+			document.getElementById('rezultat').innerHTML='<div class="alert alert-success"><b>Thank you for commenting!</b></div>';
 		}
-		
-		
 		</script>
 		<title>Festival - Contact</title>
 	</head>
@@ -144,18 +155,18 @@
 					<h2>Contact</h2>
 					<p>
 If you have any questions, suggestions or comments, please be free to send us. </p>
-					<form method="post" action="" id="contactfrm" role="form">
+					<form method="post" action="" id="contactfrm" role="form" name="forma">
 						<div class="form-group">
-							<label for="name">Name</label>
-							<input type="text" class="form-control" name="name" id="name" placeholder="Write your name" title="Unesite svoje ime">
+							<label for="ime">Name</label>
+							<input type="text" class="form-control" name="ime" id="name" placeholder="Write your name" title="Unesite svoje ime">
 						</div>
 						<div class="form-group">
 							<label for="email">Email</label>
 							<input type="email" class="form-control" name="email" id="email" placeholder="Write your email" title="Unesite svoj email">
 						</div>
 						<div class="form-group">
-							<label for="comments">Your comment</label>
-								<textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Write your comment..." title="Unesite vašu poruku"></textarea>
+							<label for="komentar">Your comment</label>
+								<textarea name="comment" class="form-control" id="komentar" cols="3" rows="5" placeholder="Write your comment..." title="Unesite vašu poruku"></textarea>
 						</div>
 						<button name="dugme" type="button" class="btn btn-lg btn-read-more" id="posalji" onclick="pritisnuoPosalji()">Send</button>
 						
